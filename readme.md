@@ -19,7 +19,9 @@ git clone https://github.com/askr3d/diagnosticoMedico.git
 
 ## Editar con QtDesigner
 1. Ejecutar en la consola con el entorno activado ```pip show pyside2```
+
 Saldra algo asi ![Imagen](instalacion/image.png)
 2. Copiar la ruta de `Location:` y pegarla en el explorador de archivos
 3. Ir a la carpeta `PySide2` y ejectuar la aplicacion que diga `designer`
+
 ![Designer](instalacion/designer.PNG)
