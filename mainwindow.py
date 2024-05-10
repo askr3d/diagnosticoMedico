@@ -9,6 +9,9 @@ from db.sesion import Sesion
 from db.user import User
 from db.rol import Rol
 from db.cita import Cita
+from db.sintoma import Sintoma
+from db.signo import Signo
+from db.enfermedad import Enfermedad
 
 
 STYLE_MSJ_EXITOSO = """
@@ -132,7 +135,46 @@ class SecondWindow(QMainWindow):
         self.ui.btnEditarCitaSubmit.clicked.connect(self.editarCitaPost)
                 #Busqueda Citas
         self.ui.inpBusquedaCitas.textChanged.connect(self.busquedaCitas)
+            
+            #* Analisis
+        self.ui.btnAnalisis.mousePressEvent = self.paginaAnalisis
 
+            # TODO Enfermedades
+        self.ui.btnEnfermedades.mousePressEvent = self.paginaEnfermedades
+                #Agregar Enfermedad
+        self.ui.btnAgregarEnfermedad.clicked.connect(self.agregarEnfermedadGet)
+        self.ui.btnRegresarAEnfermedades.clicked.connect(self.paginaEnfermedades)
+        self.ui.lblRegresarAEnfermedades.mousePressEvent = self.paginaEnfermedades
+        self.ui.btnRegistroEnfermedadSubmit.clicked.connect(self.agregarEnfermedadPost)
+                #Editar Enfermedad
+        self.ui.btnRegresarAgEnfermedades.clicked.connect(self.paginaEnfermedades)
+        self.ui.lblRegresarAgEnfermedades.mousePressEvent = self.paginaEnfermedades
+        self.ui.btnEditarEnfermedadSubmit.clicked.connect(self.editarEnfermedadPost)
+
+
+            #*Signos
+        self.ui.btnSignos.mousePressEvent = self.paginaSignos
+                #Agregar Signo
+        self.ui.btnAgregarSigno.clicked.connect(self.agregarSignoGet)
+        self.ui.btnRegistroSignoSubmit.clicked.connect(self.agregarSignoPost)
+        self.ui.btnRegresarASignos.clicked.connect(self.paginaSignos)
+        self.ui.lblRegresarASignos.mousePressEvent = self.paginaSignos
+                #Editar Signo
+        self.ui.btnRegresarAgSignos.clicked.connect(self.paginaSignos)
+        self.ui.lblRegresarAgSignos.mousePressEvent = self.paginaSignos
+        self.ui.btnEditarSignoSubmit.clicked.connect(self.editarSignoPost)
+
+            #* Sintomas
+        self.ui.btnSintomas.mousePressEvent = self.paginaSintomas
+                #Agregar Sintoma
+        self.ui.btnAgregarSintoma.clicked.connect(self.agregarSintomaGet)
+        self.ui.btnRegistroSintomaSubmit.clicked.connect(self.agregarSintomaPost)
+        self.ui.btnRegresarASintomas.clicked.connect(self.paginaSintomas)
+        self.ui.lblRegresarASintomas.mousePressEvent = self.paginaSintomas
+                #Editar Sintoma
+        self.ui.btnRegresarAgSintomas.clicked.connect(self.paginaSintomas)
+        self.ui.lblRegresarAgSintomas.mousePressEvent = self.paginaSintomas
+        self.ui.btnEditarSintomaSubmit.clicked.connect(self.editarSintomaPost)
         
     
     def confirmacionEliminar(self):
@@ -551,3 +593,296 @@ class SecondWindow(QMainWindow):
         palabra = self.ui.inpBusquedaCitas.text()
         self.obtenerCitas(Cita.whereAll(palabra))
     #>Citas
+
+    # * Pagina Analisis
+    def paginaAnalisis(self, event):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagAnalisis)
+        self.configurarTabla(self.ui.tblAnalisis)
+
+    # * Pagina Enfermedades
+    def paginaEnfermedades(self, event):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagEnfermedades)
+        self.configurarTabla(self.ui.tblEnfermedades)
+        self.obtenerEnfermedad(Enfermedad.all())
+
+    def obtenerEnfermedad(self, enfermedad):
+        self.ui.tblEnfermedades.clearContents()
+        self.ui.tblEnfermedades.setRowCount(len(enfermedad))
+        i = 0
+        for enfermedad in enfermedad:
+            btnEditar = QPushButton(ICONO_EDITAR, "", self)
+            btnEditar.setProperty("id", enfermedad[0])
+            btnEditar.clicked.connect(self.editarEnfermedadGet)
+            btnEditar.setCursor(Qt.PointingHandCursor)
+            btnEditar.setStyleSheet("""
+                    QPushButton{
+                        background-color: #86efac;
+                        border: none;
+                    }
+                    QPushButton::hover{
+                        background-color: #4ade80;
+                        border: none;
+                    }
+                """)
+            btnEliminar = QPushButton(ICONO_ELIMINAR, "", self)
+            btnEliminar.setProperty("id", enfermedad[0])
+            btnEliminar.clicked.connect(self.eliminarEnfermedadGet)
+            btnEliminar.setCursor(Qt.PointingHandCursor)
+            btnEliminar.setStyleSheet("""
+                    QPushButton{
+                        background-color: #fca5a5;
+                        border: none;
+                    }
+                    QPushButton::hover{
+                        background-color: #f87171;
+                    }
+                """)
+            
+            
+            self.ui.tblEnfermedades.setItem(i, 0, QTableWidgetItem(str(enfermedad[0])))
+            self.ui.tblEnfermedades.setItem(i, 1, QTableWidgetItem(enfermedad[1]))
+            self.ui.tblEnfermedades.setItem(i, 2, QTableWidgetItem(enfermedad[2]))
+            self.ui.tblEnfermedades.setItem(i, 3, QTableWidgetItem(enfermedad[3]))
+            self.ui.tblEnfermedades.setCellWidget(i, 4, btnEditar)
+            self.ui.tblEnfermedades.setCellWidget(i, 5, btnEliminar)
+            i = i+1
+
+    def agregarEnfermedadGet(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagAgregarEnfermedad)
+        self.ui.lblRegistroEnfermedad.hide()
+        self.ui.inpRegistroEnfermedad.setText('')
+        self.ui.inpRegistroESigno.setText('')
+        self.ui.inpRegistroESintoma.setText('')
+
+    def agregarEnfermedadPost(self):
+        enfermedad = self.ui.inpRegistroEnfermedad.text()
+        signo = self.ui.inpRegistroESigno.text()
+        sintoma = self.ui.inpRegistroESintoma.text()
+        print(enfermedad, signo, sintoma)
+        if enfermedad != '' and sintoma != '' and signo != '':
+            if Enfermedad.create(enfermedad, signo, sintoma):
+                self.frameIconoMensaje(self.ui.lblRegistroEnfermedad, self.ui.lblIconoRegistroEnfermedad, self.ui.lblMsjRegistroEnfermedad)
+            QTimer.singleShot(2000, lambda: self.paginaEnfermedades(event=None))
+        else:
+            self.frameIconoMensaje(self.ui.lblRegistroEnfermedad, self.ui.lblIconoRegistroEnfermedad, self.ui.lblMsjRegistroEnfermedad, STYLE_MSJ_ERROR, ICONO_ERROR, True)
+    
+    def editarEnfermedadGet(self):
+        enfermedad = Enfermedad.where(str(self.sender().property("id")))
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagEditarEnfermedad)
+        self.ui.lblEditarEnfermedad.hide()
+        self.ui.lblEditarEnfermedadActual.setText(str(enfermedad.id))
+        self.ui.inpEditarEnfermedad.setText(enfermedad.enfermedad)
+        self.ui.inpEditarESigno.setText(enfermedad.signo)
+        self.ui.inpEditarESintoma.setText(enfermedad.sintoma)
+
+    def editarEnfermedadPost(self):
+        self.ui.lblEditarEnfermedad.show()
+        id = self.ui.lblEditarEnfermedadActual.text()
+        enfermedad = self.ui.inpEditarEnfermedad.text()
+        signo = self.ui.inpEditarESigno.text()
+        sintoma = self.ui.inpEditarESintoma.text()
+        if enfermedad != '' and signo != '' and sintoma != '':
+            if Enfermedad.update(id, enfermedad, signo, sintoma):
+                self.frameIconoMensaje(self.ui.lblEditarEnfermedad, self.ui.lblIconoEditarEnfermedad, self.ui.lblMsjEditarEnfermedad, mensaje="Enfermedad actualizada correctamente")
+            QTimer.singleShot(2000, lambda: self.paginaEnfermedades(event=None))
+        else:
+            self.frameIconoMensaje(self.ui.lblEditarEnfermedad, self.ui.lblIconoEditarEnfermedad, self.ui.lblMsjEditarEnfermedad, STYLE_MSJ_ERROR, ICONO_ERROR, True)
+
+    def eliminarEnfermedadGet(self):
+        self.deleteWindow_UI.lblEliminarRegistroID.setText(str(self.sender().property("id")))
+        self.deleteWindow.finished.connect(self.eliminarEnfermedadPost)
+        self.deleteWindow.exec_()
+
+    def eliminarEnfermedadPost(self):
+        if self.confirmacion == True:
+            id = self.deleteWindow_UI.lblEliminarRegistroID.text()
+            Enfermedad.delete(id)
+            self.obtenerEnfermedad(Enfermedad.all())
+            self.confirmacion = False
+        self.deleteWindow.finished.disconnect(self.eliminarEnfermedadPost)
+    #>Enfermedades
+
+    #* Pagina Signos
+    def paginaSignos(self, event):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagSignos)
+        self.configurarTabla(self.ui.tblSignos)
+        self.obtenerSignos(Signo.all())
+
+    def obtenerSignos(self, signos):
+        self.ui.tblSignos.clearContents()
+        self.ui.tblSignos.setRowCount(len(signos))
+        i = 0
+        for signo in signos:
+            btnEditar = QPushButton(ICONO_EDITAR, "", self)
+            btnEditar.setProperty("id", signo[0])
+            btnEditar.clicked.connect(self.editarSignoGet)
+            btnEditar.setCursor(Qt.PointingHandCursor)
+            btnEditar.setStyleSheet("""
+                    QPushButton{
+                        background-color: #86efac;
+                        border: none;
+                    }
+                    QPushButton::hover{
+                        background-color: #4ade80;
+                        border: none;
+                    }
+                """)
+            btnEliminar = QPushButton(ICONO_ELIMINAR, "", self)
+            btnEliminar.setProperty("id", signo[0])
+            btnEliminar.clicked.connect(self.eliminarSignoGet)
+            btnEliminar.setCursor(Qt.PointingHandCursor)
+            btnEliminar.setStyleSheet("""
+                    QPushButton{
+                        background-color: #fca5a5;
+                        border: none;
+                    }
+                    QPushButton::hover{
+                        background-color: #f87171;
+                    }
+                """)
+            self.ui.tblSignos.setItem(i, 0, QTableWidgetItem(str(signo[0])))
+            self.ui.tblSignos.setItem(i, 1, QTableWidgetItem(signo[1]))
+            self.ui.tblSignos.setCellWidget(i, 2, btnEditar)
+            self.ui.tblSignos.setCellWidget(i, 3, btnEliminar)
+            i = i+1
+
+    def agregarSignoGet(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagAgregarSigno)
+        self.ui.lblRegistroSigno.hide()
+
+    def agregarSignoPost(self):
+        signo = self.ui.inpRegistroSigno.text()
+        print(signo)
+        self.ui.lblRegistroSigno.show()
+        if signo !="":   
+            if Signo.create(signo):
+                self.frameIconoMensaje(self.ui.lblRegistroSintoma, self.ui.lblIconoRegistroSintoma, self.ui.lblMsjRegistroSintoma)
+            QTimer.singleShot(2000, lambda: self.paginaSignos(event=None))
+        else:
+            self.frameIconoMensaje(self.ui.lblRegistroSigno, self.ui.lblIconoRegistroSigno, self.ui.lblMsjRegistroSigno, STYLE_MSJ_ERROR, ICONO_ERROR, True)
+            print('error')
+            
+    def editarSignoGet(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagEditarSigno)
+        self.ui.lblEditarSigno.hide()
+        signo = Signo.where(str(self.sender().property("id")))
+        self.ui.lblEditarSignoActual.setText(str(signo.id))
+        self.ui.inpEditarSigno.setText(signo.signo)
+    
+    def editarSignoPost(self):
+        self.ui.lblEditarSigno.show()
+        signo = self.ui.inpEditarSigno.text()
+        id = self.ui.lblEditarSignoActual.text()
+        if signo != '' and id != 0:
+            if Signo.update(id, signo):
+                self.frameIconoMensaje(self.ui.lblEditarSigno, self.ui.lblIconoEditarSigno, self.ui.lblMsjEditarSigno, mensaje="Signo actualizado correctamente")
+            QTimer.singleShot(2000, lambda: self.paginaSignos(event=None))
+        else:
+            self.frameIconoMensaje(self.ui.lblEditarSigno, self.ui.lblIconoEditarSigno, self.ui.lblMsjEditarSigno, STYLE_MSJ_ERROR, ICONO_ERROR, True)
+    
+    def eliminarSignoGet(self):
+        self.deleteWindow_UI.lblEliminarRegistroID.setText(str(self.sender().property("id")))
+        self.deleteWindow.finished.connect(self.eliminarSignoPost)
+        self.deleteWindow.exec_()
+
+    def eliminarSignoPost(self):
+        if self.confirmacion == True:
+            id = self.deleteWindow_UI.lblEliminarRegistroID.text()
+            Signo.delete(id)
+            self.obtenerSignos(Signo.all())
+            self.confirmacion = False
+        self.deleteWindow.finished.disconnect(self.eliminarSignoPost)
+    #>Signos
+    
+    #* Pagina Sintomas
+    def paginaSintomas(self,event):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagSintomas)
+        self.configurarTabla(self.ui.tblSintomas)
+        self.obtenerSintomas(Sintoma.all())
+         
+    def obtenerSintomas(self, sintomas):
+        self.ui.tblSintomas.clearContents()
+        self.ui.tblSintomas.setRowCount(len(sintomas))
+        i = 0
+        for sintoma in sintomas:
+            btnEditar = QPushButton(ICONO_EDITAR, "", self)
+            btnEditar.setProperty("id", sintoma[0])
+            btnEditar.clicked.connect(self.editarSintomaGet)
+            btnEditar.setCursor(Qt.PointingHandCursor)
+            btnEditar.setStyleSheet("""
+                    QPushButton{
+                        background-color: #86efac;
+                        border: none;
+                    }
+                    QPushButton::hover{
+                        background-color: #4ade80;
+                        border: none;
+                    }
+                """)
+            btnEliminar = QPushButton(ICONO_ELIMINAR, "", self)
+            btnEliminar.setProperty("id", sintoma[0])
+            btnEliminar.clicked.connect(self.eliminarSintomaGet)
+            btnEliminar.setCursor(Qt.PointingHandCursor)
+            btnEliminar.setStyleSheet("""
+                    QPushButton{
+                        background-color: #fca5a5;
+                        border: none;
+                    }
+                    QPushButton::hover{
+                        background-color: #f87171;
+                    }
+                """)
+            self.ui.tblSintomas.setItem(i, 0, QTableWidgetItem(str(sintoma[0])))
+            self.ui.tblSintomas.setItem(i, 1, QTableWidgetItem(sintoma[1]))
+            self.ui.tblSintomas.setCellWidget(i, 2, btnEditar)
+            self.ui.tblSintomas.setCellWidget(i, 3, btnEliminar)
+            i = i+1
+
+
+    def agregarSintomaGet(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagAgregarSintoma)
+        self.ui.lblRegistroSintoma.hide()
+
+    def agregarSintomaPost(self):
+        sintoma = self.ui.inpRegistroSintoma.text()
+        self.ui.lblRegistroSintoma.show()
+        if sintoma!="":
+            if Sintoma.create(sintoma):
+                self.frameIconoMensaje(self.ui.lblRegistroSintoma, self.ui.lblIconoRegistroSintoma, self.ui.lblMsjRegistroSintoma)
+            QTimer.singleShot(2000, lambda: self.paginaSintomas(event=None))
+        else:
+            self.frameIconoMensaje(self.ui.lblRegistroSintoma, self.ui.lblIconoRegistroSintoma, self.ui.lblMsjRegistroSintoma, STYLE_MSJ_ERROR, ICONO_ERROR, True)
+            print('error')
+
+    def editarSintomaGet(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagEditarSintoma)
+        self.ui.lblEditarSintoma.hide()
+        sintoma = Sintoma.where(str(self.sender().property("id")))
+        self.ui.lblEditarSintomaActual.setText(str(sintoma.id))
+        self.ui.inpEditarSintoma.setText(sintoma.sintoma)
+
+    def editarSintomaPost(self):
+        self.ui.lblEditarSintoma.show()
+        sintoma = self.ui.inpEditarSintoma.text()
+        id = self.ui.lblEditarSintomaActual.text()
+        if sintoma != '' and id != 0:
+            if Sintoma.update(id, sintoma):
+                self.frameIconoMensaje(self.ui.lblEditarSintoma, self.ui.lblIconoEditarSintoma, self.ui.lblMsjEditarSintoma, mensaje="Sintoma actualizado correctamente")
+            QTimer.singleShot(2000, lambda: self.paginaSintomas(event=None))
+        else:
+            self.frameIconoMensaje(self.ui.lblEditarSintoma, self.ui.lblIconoEditarSintoma, self.ui.lblMsjEditarSintoma, STYLE_MSJ_ERROR, ICONO_ERROR, True)
+    
+    def eliminarSintomaGet(self):
+        self.deleteWindow_UI.lblEliminarRegistroID.setText(str(self.sender().property("id")))
+        self.deleteWindow.finished.connect(self.eliminarSintomaPost)
+        self.deleteWindow.exec_()
+
+    def eliminarSintomaPost(self):
+        if self.confirmacion == True:
+            id = self.deleteWindow_UI.lblEliminarRegistroID.text()
+            Sintoma.delete(id)
+            self.obtenerSintomas(Sintoma.all())
+            self.confirmacion = False
+        self.deleteWindow.finished.disconnect(self.eliminarSintomaPost)
+
+    #>Sintomas

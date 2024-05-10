@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(869, 702)
+        MainWindow.resize(930, 710)
         icon = QIcon()
         icon.addFile(u"img/logo.svg", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -26,10 +26,10 @@ class Ui_MainWindow(object):
         self.centralwidget.setStyleSheet(u"QWidget{\n"
 "	background-color: #3F3F46;\n"
 "}")
-        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
-        self.verticalLayout_2.setSpacing(6)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_36 = QHBoxLayout(self.centralwidget)
+        self.horizontalLayout_36.setSpacing(6)
+        self.horizontalLayout_36.setObjectName(u"horizontalLayout_36")
+        self.horizontalLayout_36.setContentsMargins(0, 0, 0, 0)
         self.frame_9 = QFrame(self.centralwidget)
         self.frame_9.setObjectName(u"frame_9")
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
@@ -153,6 +153,7 @@ class Ui_MainWindow(object):
         font1.setBold(True)
         font1.setWeight(75)
         self.lblUsuarios.setFont(font1)
+        self.lblUsuarios.setLayoutDirection(Qt.LeftToRight)
         self.lblUsuarios.setStyleSheet(u"QLabel{\n"
 "	background-color: transparent;\n"
 "	color: #fff;\n"
@@ -161,7 +162,7 @@ class Ui_MainWindow(object):
         self.gridLayout_5.addWidget(self.lblUsuarios, 0, 1, 1, 1)
 
 
-        self.verticalLayout_4.addWidget(self.btnUsuarios)
+        self.verticalLayout_4.addWidget(self.btnUsuarios, 0, Qt.AlignLeft)
 
         self.btnPacientes = QFrame(self.frame_5)
         self.btnPacientes.setObjectName(u"btnPacientes")
@@ -196,7 +197,7 @@ class Ui_MainWindow(object):
         self.gridLayout_6.addWidget(self.lblPacientes, 0, 1, 1, 1)
 
 
-        self.verticalLayout_4.addWidget(self.btnPacientes)
+        self.verticalLayout_4.addWidget(self.btnPacientes, 0, Qt.AlignLeft)
 
         self.btnCitas = QFrame(self.frame_5)
         self.btnCitas.setObjectName(u"btnCitas")
@@ -231,19 +232,19 @@ class Ui_MainWindow(object):
         self.gridLayout_7.addWidget(self.lblCitas, 0, 1, 1, 1)
 
 
-        self.verticalLayout_4.addWidget(self.btnCitas)
+        self.verticalLayout_4.addWidget(self.btnCitas, 0, Qt.AlignLeft)
 
-        self.btnAnalasis = QFrame(self.frame_5)
-        self.btnAnalasis.setObjectName(u"btnAnalasis")
-        self.btnAnalasis.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btnAnalasis.setStyleSheet(u"QFrame:hover{\n"
+        self.btnAnalisis = QFrame(self.frame_5)
+        self.btnAnalisis.setObjectName(u"btnAnalisis")
+        self.btnAnalisis.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnAnalisis.setStyleSheet(u"QFrame:hover{\n"
 "	background-color: #475569;\n"
 "}")
-        self.btnAnalasis.setFrameShape(QFrame.StyledPanel)
-        self.btnAnalasis.setFrameShadow(QFrame.Raised)
-        self.gridLayout_8 = QGridLayout(self.btnAnalasis)
+        self.btnAnalisis.setFrameShape(QFrame.StyledPanel)
+        self.btnAnalisis.setFrameShadow(QFrame.Raised)
+        self.gridLayout_8 = QGridLayout(self.btnAnalisis)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
-        self.pushButton_9 = QPushButton(self.btnAnalasis)
+        self.pushButton_9 = QPushButton(self.btnAnalisis)
         self.pushButton_9.setObjectName(u"pushButton_9")
         self.pushButton_9.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
@@ -255,7 +256,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_8.addWidget(self.pushButton_9, 0, 0, 1, 1)
 
-        self.lblAnalisis = QLabel(self.btnAnalasis)
+        self.lblAnalisis = QLabel(self.btnAnalisis)
         self.lblAnalisis.setObjectName(u"lblAnalisis")
         self.lblAnalisis.setFont(font1)
         self.lblAnalisis.setStyleSheet(u"QLabel{\n"
@@ -266,7 +267,112 @@ class Ui_MainWindow(object):
         self.gridLayout_8.addWidget(self.lblAnalisis, 0, 1, 1, 1)
 
 
-        self.verticalLayout_4.addWidget(self.btnAnalasis)
+        self.verticalLayout_4.addWidget(self.btnAnalisis, 0, Qt.AlignLeft)
+
+        self.btnEnfermedades = QFrame(self.frame_5)
+        self.btnEnfermedades.setObjectName(u"btnEnfermedades")
+        self.btnEnfermedades.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: #475569;\n"
+"}")
+        self.btnEnfermedades.setFrameShape(QFrame.StyledPanel)
+        self.btnEnfermedades.setFrameShadow(QFrame.Raised)
+        self.gridLayout_12 = QGridLayout(self.btnEnfermedades)
+        self.gridLayout_12.setObjectName(u"gridLayout_12")
+        self.pushButton = QPushButton(self.btnEnfermedades)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        icon6 = QIcon()
+        icon6.addFile(u"img/enfermedad.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon6)
+        self.pushButton.setIconSize(QSize(30, 30))
+
+        self.gridLayout_12.addWidget(self.pushButton, 0, 0, 1, 1)
+
+        self.label_3 = QLabel(self.btnEnfermedades)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setFont(font1)
+        self.label_3.setStyleSheet(u"QLabel{\n"
+"	background-color: transparent;\n"
+"	color: #fff;\n"
+"}")
+
+        self.gridLayout_12.addWidget(self.label_3, 0, 1, 1, 1)
+
+
+        self.verticalLayout_4.addWidget(self.btnEnfermedades, 0, Qt.AlignLeft)
+
+        self.btnSignos = QFrame(self.frame_5)
+        self.btnSignos.setObjectName(u"btnSignos")
+        self.btnSignos.setLayoutDirection(Qt.LeftToRight)
+        self.btnSignos.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: #475569;\n"
+"}")
+        self.btnSignos.setFrameShape(QFrame.StyledPanel)
+        self.btnSignos.setFrameShadow(QFrame.Raised)
+        self.gridLayout_18 = QGridLayout(self.btnSignos)
+        self.gridLayout_18.setObjectName(u"gridLayout_18")
+        self.pushButton_2 = QPushButton(self.btnSignos)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setLayoutDirection(Qt.LeftToRight)
+        self.pushButton_2.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        icon7 = QIcon()
+        icon7.addFile(u"img/signos.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_2.setIcon(icon7)
+        self.pushButton_2.setIconSize(QSize(30, 30))
+
+        self.gridLayout_18.addWidget(self.pushButton_2, 0, 0, 1, 1)
+
+        self.label_4 = QLabel(self.btnSignos)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setFont(font1)
+        self.label_4.setStyleSheet(u"QLabel{\n"
+"	background-color: transparent;\n"
+"	color: #fff;\n"
+"}")
+
+        self.gridLayout_18.addWidget(self.label_4, 0, 1, 1, 1)
+
+
+        self.verticalLayout_4.addWidget(self.btnSignos, 0, Qt.AlignLeft)
+
+        self.btnSintomas = QFrame(self.frame_5)
+        self.btnSintomas.setObjectName(u"btnSintomas")
+        self.btnSintomas.setLayoutDirection(Qt.LeftToRight)
+        self.btnSintomas.setStyleSheet(u"QFrame:hover{\n"
+"	background-color: #475569;\n"
+"}")
+        self.btnSintomas.setFrameShape(QFrame.StyledPanel)
+        self.btnSintomas.setFrameShadow(QFrame.Raised)
+        self.gridLayout_19 = QGridLayout(self.btnSintomas)
+        self.gridLayout_19.setObjectName(u"gridLayout_19")
+        self.pushButton_3 = QPushButton(self.btnSintomas)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.pushButton_3.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        icon8 = QIcon()
+        icon8.addFile(u"img/sintomas.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_3.setIcon(icon8)
+        self.pushButton_3.setIconSize(QSize(30, 30))
+
+        self.gridLayout_19.addWidget(self.pushButton_3, 0, 0, 1, 1)
+
+        self.label_5 = QLabel(self.btnSintomas)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setFont(font1)
+        self.label_5.setStyleSheet(u"QLabel{\n"
+"	background-color: transparent;\n"
+"	color: #fff;\n"
+"}")
+
+        self.gridLayout_19.addWidget(self.label_5, 0, 1, 1, 1)
+
+
+        self.verticalLayout_4.addWidget(self.btnSintomas, 0, Qt.AlignLeft)
 
 
         self.verticalLayout_5.addWidget(self.frame_5)
@@ -289,9 +395,9 @@ class Ui_MainWindow(object):
         self.pushButton_11.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        icon6 = QIcon()
-        icon6.addFile(u"img/salir.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_11.setIcon(icon6)
+        icon9 = QIcon()
+        icon9.addFile(u"img/salir.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_11.setIcon(icon9)
         self.pushButton_11.setIconSize(QSize(30, 30))
 
         self.gridLayout_9.addWidget(self.pushButton_11, 0, 0, 1, 1)
@@ -562,9 +668,9 @@ class Ui_MainWindow(object):
         self.pushButton_15.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        icon7 = QIcon()
-        icon7.addFile(u"img/usuariosPag.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_15.setIcon(icon7)
+        icon10 = QIcon()
+        icon10.addFile(u"img/usuariosPag.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_15.setIcon(icon10)
         self.pushButton_15.setIconSize(QSize(80, 80))
 
         self.horizontalLayout_8.addWidget(self.pushButton_15)
@@ -607,9 +713,9 @@ class Ui_MainWindow(object):
 "QPushButton::hover{\n"
 "	background-color: #0284c7;\n"
 "}")
-        icon8 = QIcon()
-        icon8.addFile(u"img/add.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnAgregarUsuario.setIcon(icon8)
+        icon11 = QIcon()
+        icon11.addFile(u"img/add.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btnAgregarUsuario.setIcon(icon11)
         self.btnAgregarUsuario.setIconSize(QSize(20, 50))
 
         self.horizontalLayout_8.addWidget(self.btnAgregarUsuario)
@@ -737,9 +843,9 @@ class Ui_MainWindow(object):
         self.pushButton_16.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        icon9 = QIcon()
-        icon9.addFile(u"img/pacientesPag.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_16.setIcon(icon9)
+        icon12 = QIcon()
+        icon12.addFile(u"img/pacientesPag.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_16.setIcon(icon12)
         self.pushButton_16.setIconSize(QSize(80, 80))
 
         self.horizontalLayout_11.addWidget(self.pushButton_16)
@@ -774,7 +880,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover{\n"
 "	background-color: #0284c7;\n"
 "}")
-        self.btnAgregarPaciente.setIcon(icon8)
+        self.btnAgregarPaciente.setIcon(icon11)
         self.btnAgregarPaciente.setIconSize(QSize(20, 50))
 
         self.horizontalLayout_11.addWidget(self.btnAgregarPaciente)
@@ -882,9 +988,9 @@ class Ui_MainWindow(object):
         self.pushButton_17.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        icon10 = QIcon()
-        icon10.addFile(u"img/citasPag.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_17.setIcon(icon10)
+        icon13 = QIcon()
+        icon13.addFile(u"img/citasPag.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_17.setIcon(icon13)
         self.pushButton_17.setIconSize(QSize(80, 80))
 
         self.horizontalLayout_28.addWidget(self.pushButton_17)
@@ -919,7 +1025,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover{\n"
 "	background-color: #0284c7;\n"
 "}")
-        self.btnAgregarCita.setIcon(icon8)
+        self.btnAgregarCita.setIcon(icon11)
         self.btnAgregarCita.setIconSize(QSize(20, 50))
 
         self.horizontalLayout_28.addWidget(self.btnAgregarCita)
@@ -1007,7 +1113,548 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.pagCitas)
         self.pagAnalisis = QWidget()
         self.pagAnalisis.setObjectName(u"pagAnalisis")
+        self.verticalLayout_18 = QVBoxLayout(self.pagAnalisis)
+        self.verticalLayout_18.setSpacing(0)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.frame_6 = QFrame(self.pagAnalisis)
+        self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setMinimumSize(QSize(0, 120))
+        self.frame_6.setFrameShape(QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.frame_6)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(20, 20, 20, 20)
+        self.pushButton_18 = QPushButton(self.frame_6)
+        self.pushButton_18.setObjectName(u"pushButton_18")
+        self.pushButton_18.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        icon14 = QIcon()
+        icon14.addFile(u"img/enfermedadesPag.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_18.setIcon(icon14)
+        self.pushButton_18.setIconSize(QSize(80, 80))
+
+        self.horizontalLayout_2.addWidget(self.pushButton_18)
+
+        self.lblBienvenenida_5 = QLabel(self.frame_6)
+        self.lblBienvenenida_5.setObjectName(u"lblBienvenenida_5")
+        sizePolicy.setHeightForWidth(self.lblBienvenenida_5.sizePolicy().hasHeightForWidth())
+        self.lblBienvenenida_5.setSizePolicy(sizePolicy)
+        self.lblBienvenenida_5.setFont(font2)
+
+        self.horizontalLayout_2.addWidget(self.lblBienvenenida_5)
+
+        self.btnAgregarAnalisis = QPushButton(self.frame_6)
+        self.btnAgregarAnalisis.setObjectName(u"btnAgregarAnalisis")
+        sizePolicy4.setHeightForWidth(self.btnAgregarAnalisis.sizePolicy().hasHeightForWidth())
+        self.btnAgregarAnalisis.setSizePolicy(sizePolicy4)
+        self.btnAgregarAnalisis.setMaximumSize(QSize(16777215, 16777215))
+        self.btnAgregarAnalisis.setFont(font3)
+        self.btnAgregarAnalisis.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnAgregarAnalisis.setLayoutDirection(Qt.LeftToRight)
+        self.btnAgregarAnalisis.setStyleSheet(u"QPushButton{\n"
+"	background-color: #0EA5E9;\n"
+"	border: none;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	color: #fff;\n"
+"	margin-left: 20px;\n"
+"	margin-right: 20px;\n"
+"	border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"	background-color: #0284c7;\n"
+"}")
+        self.btnAgregarAnalisis.setIcon(icon11)
+        self.btnAgregarAnalisis.setIconSize(QSize(20, 50))
+
+        self.horizontalLayout_2.addWidget(self.btnAgregarAnalisis)
+
+
+        self.verticalLayout_18.addWidget(self.frame_6, 0, Qt.AlignTop)
+
+        self.frame_8 = QFrame(self.pagAnalisis)
+        self.frame_8.setObjectName(u"frame_8")
+        self.frame_8.setMinimumSize(QSize(0, 55))
+        self.frame_8.setMaximumSize(QSize(16777215, 80))
+        self.frame_8.setFrameShape(QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_15 = QHBoxLayout(self.frame_8)
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.horizontalLayout_15.setContentsMargins(100, -1, 100, -1)
+        self.label_33 = QLabel(self.frame_8)
+        self.label_33.setObjectName(u"label_33")
+        sizePolicy1.setHeightForWidth(self.label_33.sizePolicy().hasHeightForWidth())
+        self.label_33.setSizePolicy(sizePolicy1)
+        self.label_33.setFont(font4)
+
+        self.horizontalLayout_15.addWidget(self.label_33)
+
+        self.inpBusquedaCitas_2 = QLineEdit(self.frame_8)
+        self.inpBusquedaCitas_2.setObjectName(u"inpBusquedaCitas_2")
+        sizePolicy5.setHeightForWidth(self.inpBusquedaCitas_2.sizePolicy().hasHeightForWidth())
+        self.inpBusquedaCitas_2.setSizePolicy(sizePolicy5)
+        self.inpBusquedaCitas_2.setFont(font4)
+        self.inpBusquedaCitas_2.setStyleSheet(u"QLineEdit{\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid #8B8B8B;\n"
+"	padding: 10px;\n"
+"	color: #525252;\n"
+"}")
+        self.inpBusquedaCitas_2.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_15.addWidget(self.inpBusquedaCitas_2)
+
+
+        self.verticalLayout_18.addWidget(self.frame_8, 0, Qt.AlignTop)
+
+        self.frame_7 = QFrame(self.pagAnalisis)
+        self.frame_7.setObjectName(u"frame_7")
+        sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
+        self.frame_7.setSizePolicy(sizePolicy)
+        self.frame_7.setFrameShape(QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_19 = QVBoxLayout(self.frame_7)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.tblAnalisis = QTableWidget(self.frame_7)
+        if (self.tblAnalisis.columnCount() < 5):
+            self.tblAnalisis.setColumnCount(5)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        __qtablewidgetitem17.setFont(font5);
+        self.tblAnalisis.setHorizontalHeaderItem(0, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        __qtablewidgetitem18.setFont(font5);
+        self.tblAnalisis.setHorizontalHeaderItem(1, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.tblAnalisis.setHorizontalHeaderItem(2, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        __qtablewidgetitem20.setFont(font5);
+        self.tblAnalisis.setHorizontalHeaderItem(3, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        __qtablewidgetitem21.setFont(font5);
+        self.tblAnalisis.setHorizontalHeaderItem(4, __qtablewidgetitem21)
+        self.tblAnalisis.setObjectName(u"tblAnalisis")
+        self.tblAnalisis.setFont(font4)
+        self.tblAnalisis.setStyleSheet(u"QHeaderView::section{\n"
+"	background-color: #ECECEC;\n"
+"	border: 1px solid #8d8d8d;\n"
+"}")
+        self.tblAnalisis.setTextElideMode(Qt.ElideMiddle)
+
+        self.verticalLayout_19.addWidget(self.tblAnalisis)
+
+
+        self.verticalLayout_18.addWidget(self.frame_7)
+
         self.stackedWidget.addWidget(self.pagAnalisis)
+        self.pagEnfermedades = QWidget()
+        self.pagEnfermedades.setObjectName(u"pagEnfermedades")
+        self.verticalLayout_51 = QVBoxLayout(self.pagEnfermedades)
+        self.verticalLayout_51.setSpacing(0)
+        self.verticalLayout_51.setObjectName(u"verticalLayout_51")
+        self.verticalLayout_51.setContentsMargins(0, 0, 0, 0)
+        self.frame_76 = QFrame(self.pagEnfermedades)
+        self.frame_76.setObjectName(u"frame_76")
+        self.frame_76.setMinimumSize(QSize(0, 120))
+        self.frame_76.setFrameShape(QFrame.StyledPanel)
+        self.frame_76.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_42 = QHBoxLayout(self.frame_76)
+        self.horizontalLayout_42.setObjectName(u"horizontalLayout_42")
+        self.horizontalLayout_42.setContentsMargins(20, 20, 20, 20)
+        self.pushButton_21 = QPushButton(self.frame_76)
+        self.pushButton_21.setObjectName(u"pushButton_21")
+        self.pushButton_21.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        icon15 = QIcon()
+        icon15.addFile(u"img/enfermedadPag.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_21.setIcon(icon15)
+        self.pushButton_21.setIconSize(QSize(80, 80))
+
+        self.horizontalLayout_42.addWidget(self.pushButton_21)
+
+        self.lblBienvenenida_8 = QLabel(self.frame_76)
+        self.lblBienvenenida_8.setObjectName(u"lblBienvenenida_8")
+        sizePolicy.setHeightForWidth(self.lblBienvenenida_8.sizePolicy().hasHeightForWidth())
+        self.lblBienvenenida_8.setSizePolicy(sizePolicy)
+        self.lblBienvenenida_8.setFont(font2)
+
+        self.horizontalLayout_42.addWidget(self.lblBienvenenida_8)
+
+        self.btnAgregarEnfermedad = QPushButton(self.frame_76)
+        self.btnAgregarEnfermedad.setObjectName(u"btnAgregarEnfermedad")
+        sizePolicy4.setHeightForWidth(self.btnAgregarEnfermedad.sizePolicy().hasHeightForWidth())
+        self.btnAgregarEnfermedad.setSizePolicy(sizePolicy4)
+        self.btnAgregarEnfermedad.setMaximumSize(QSize(16777215, 16777215))
+        self.btnAgregarEnfermedad.setFont(font3)
+        self.btnAgregarEnfermedad.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnAgregarEnfermedad.setLayoutDirection(Qt.LeftToRight)
+        self.btnAgregarEnfermedad.setStyleSheet(u"QPushButton{\n"
+"	background-color: #0EA5E9;\n"
+"	border: none;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	color: #fff;\n"
+"	margin-left: 20px;\n"
+"	margin-right: 20px;\n"
+"	border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"	background-color: #0284c7;\n"
+"}")
+        self.btnAgregarEnfermedad.setIcon(icon11)
+        self.btnAgregarEnfermedad.setIconSize(QSize(20, 50))
+
+        self.horizontalLayout_42.addWidget(self.btnAgregarEnfermedad)
+
+
+        self.verticalLayout_51.addWidget(self.frame_76, 0, Qt.AlignTop)
+
+        self.frame_77 = QFrame(self.pagEnfermedades)
+        self.frame_77.setObjectName(u"frame_77")
+        self.frame_77.setMinimumSize(QSize(0, 55))
+        self.frame_77.setFrameShape(QFrame.StyledPanel)
+        self.frame_77.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_46 = QHBoxLayout(self.frame_77)
+        self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
+        self.horizontalLayout_46.setContentsMargins(100, -1, 100, -1)
+        self.label_37 = QLabel(self.frame_77)
+        self.label_37.setObjectName(u"label_37")
+        sizePolicy1.setHeightForWidth(self.label_37.sizePolicy().hasHeightForWidth())
+        self.label_37.setSizePolicy(sizePolicy1)
+        self.label_37.setFont(font4)
+
+        self.horizontalLayout_46.addWidget(self.label_37)
+
+        self.inpBusquedaCitas_5 = QLineEdit(self.frame_77)
+        self.inpBusquedaCitas_5.setObjectName(u"inpBusquedaCitas_5")
+        sizePolicy5.setHeightForWidth(self.inpBusquedaCitas_5.sizePolicy().hasHeightForWidth())
+        self.inpBusquedaCitas_5.setSizePolicy(sizePolicy5)
+        self.inpBusquedaCitas_5.setFont(font4)
+        self.inpBusquedaCitas_5.setStyleSheet(u"QLineEdit{\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid #8B8B8B;\n"
+"	padding: 10px;\n"
+"	color: #525252;\n"
+"}")
+        self.inpBusquedaCitas_5.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_46.addWidget(self.inpBusquedaCitas_5)
+
+
+        self.verticalLayout_51.addWidget(self.frame_77, 0, Qt.AlignTop)
+
+        self.frame_83 = QFrame(self.pagEnfermedades)
+        self.frame_83.setObjectName(u"frame_83")
+        sizePolicy.setHeightForWidth(self.frame_83.sizePolicy().hasHeightForWidth())
+        self.frame_83.setSizePolicy(sizePolicy)
+        self.frame_83.setFrameShape(QFrame.StyledPanel)
+        self.frame_83.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_47 = QHBoxLayout(self.frame_83)
+        self.horizontalLayout_47.setObjectName(u"horizontalLayout_47")
+        self.tblEnfermedades = QTableWidget(self.frame_83)
+        if (self.tblEnfermedades.columnCount() < 6):
+            self.tblEnfermedades.setColumnCount(6)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        __qtablewidgetitem22.setFont(font5);
+        self.tblEnfermedades.setHorizontalHeaderItem(0, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.tblEnfermedades.setHorizontalHeaderItem(1, __qtablewidgetitem23)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        self.tblEnfermedades.setHorizontalHeaderItem(2, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.tblEnfermedades.setHorizontalHeaderItem(3, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        __qtablewidgetitem26.setFont(font5);
+        self.tblEnfermedades.setHorizontalHeaderItem(4, __qtablewidgetitem26)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        __qtablewidgetitem27.setFont(font5);
+        self.tblEnfermedades.setHorizontalHeaderItem(5, __qtablewidgetitem27)
+        self.tblEnfermedades.setObjectName(u"tblEnfermedades")
+        self.tblEnfermedades.setFont(font4)
+        self.tblEnfermedades.setStyleSheet(u"QHeaderView::section{\n"
+"	background-color: #ECECEC;\n"
+"	border: 1px solid #8d8d8d;\n"
+"}")
+        self.tblEnfermedades.setTextElideMode(Qt.ElideMiddle)
+
+        self.horizontalLayout_47.addWidget(self.tblEnfermedades)
+
+
+        self.verticalLayout_51.addWidget(self.frame_83)
+
+        self.stackedWidget.addWidget(self.pagEnfermedades)
+        self.pagSignos = QWidget()
+        self.pagSignos.setObjectName(u"pagSignos")
+        self.verticalLayout_20 = QVBoxLayout(self.pagSignos)
+        self.verticalLayout_20.setSpacing(0)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
+        self.frame_29 = QFrame(self.pagSignos)
+        self.frame_29.setObjectName(u"frame_29")
+        self.frame_29.setMinimumSize(QSize(0, 120))
+        self.frame_29.setFrameShape(QFrame.StyledPanel)
+        self.frame_29.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_16 = QHBoxLayout(self.frame_29)
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.horizontalLayout_16.setContentsMargins(20, 20, 20, 20)
+        self.pushButton_19 = QPushButton(self.frame_29)
+        self.pushButton_19.setObjectName(u"pushButton_19")
+        self.pushButton_19.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        icon16 = QIcon()
+        icon16.addFile(u"img/signosPag.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_19.setIcon(icon16)
+        self.pushButton_19.setIconSize(QSize(80, 80))
+
+        self.horizontalLayout_16.addWidget(self.pushButton_19)
+
+        self.lblBienvenenida_6 = QLabel(self.frame_29)
+        self.lblBienvenenida_6.setObjectName(u"lblBienvenenida_6")
+        sizePolicy.setHeightForWidth(self.lblBienvenenida_6.sizePolicy().hasHeightForWidth())
+        self.lblBienvenenida_6.setSizePolicy(sizePolicy)
+        self.lblBienvenenida_6.setFont(font2)
+
+        self.horizontalLayout_16.addWidget(self.lblBienvenenida_6)
+
+        self.btnAgregarSigno = QPushButton(self.frame_29)
+        self.btnAgregarSigno.setObjectName(u"btnAgregarSigno")
+        sizePolicy4.setHeightForWidth(self.btnAgregarSigno.sizePolicy().hasHeightForWidth())
+        self.btnAgregarSigno.setSizePolicy(sizePolicy4)
+        self.btnAgregarSigno.setMaximumSize(QSize(16777215, 16777215))
+        self.btnAgregarSigno.setFont(font3)
+        self.btnAgregarSigno.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnAgregarSigno.setLayoutDirection(Qt.LeftToRight)
+        self.btnAgregarSigno.setStyleSheet(u"QPushButton{\n"
+"	background-color: #0EA5E9;\n"
+"	border: none;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	color: #fff;\n"
+"	margin-left: 20px;\n"
+"	margin-right: 20px;\n"
+"	border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"	background-color: #0284c7;\n"
+"}")
+        self.btnAgregarSigno.setIcon(icon11)
+        self.btnAgregarSigno.setIconSize(QSize(20, 50))
+
+        self.horizontalLayout_16.addWidget(self.btnAgregarSigno)
+
+
+        self.verticalLayout_20.addWidget(self.frame_29, 0, Qt.AlignTop)
+
+        self.frame_28 = QFrame(self.pagSignos)
+        self.frame_28.setObjectName(u"frame_28")
+        self.frame_28.setMinimumSize(QSize(0, 55))
+        self.frame_28.setFrameShape(QFrame.StyledPanel)
+        self.frame_28.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_17 = QHBoxLayout(self.frame_28)
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.horizontalLayout_17.setContentsMargins(100, -1, 100, -1)
+        self.label_34 = QLabel(self.frame_28)
+        self.label_34.setObjectName(u"label_34")
+        sizePolicy1.setHeightForWidth(self.label_34.sizePolicy().hasHeightForWidth())
+        self.label_34.setSizePolicy(sizePolicy1)
+        self.label_34.setFont(font4)
+
+        self.horizontalLayout_17.addWidget(self.label_34)
+
+        self.inpBusquedaCitas_3 = QLineEdit(self.frame_28)
+        self.inpBusquedaCitas_3.setObjectName(u"inpBusquedaCitas_3")
+        sizePolicy5.setHeightForWidth(self.inpBusquedaCitas_3.sizePolicy().hasHeightForWidth())
+        self.inpBusquedaCitas_3.setSizePolicy(sizePolicy5)
+        self.inpBusquedaCitas_3.setFont(font4)
+        self.inpBusquedaCitas_3.setStyleSheet(u"QLineEdit{\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid #8B8B8B;\n"
+"	padding: 10px;\n"
+"	color: #525252;\n"
+"}")
+        self.inpBusquedaCitas_3.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_17.addWidget(self.inpBusquedaCitas_3)
+
+
+        self.verticalLayout_20.addWidget(self.frame_28, 0, Qt.AlignTop)
+
+        self.frame_30 = QFrame(self.pagSignos)
+        self.frame_30.setObjectName(u"frame_30")
+        sizePolicy.setHeightForWidth(self.frame_30.sizePolicy().hasHeightForWidth())
+        self.frame_30.setSizePolicy(sizePolicy)
+        self.frame_30.setFrameShape(QFrame.StyledPanel)
+        self.frame_30.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.frame_30)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.tblSignos = QTableWidget(self.frame_30)
+        if (self.tblSignos.columnCount() < 4):
+            self.tblSignos.setColumnCount(4)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        __qtablewidgetitem28.setFont(font5);
+        self.tblSignos.setHorizontalHeaderItem(0, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        self.tblSignos.setHorizontalHeaderItem(1, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        __qtablewidgetitem30.setFont(font5);
+        self.tblSignos.setHorizontalHeaderItem(2, __qtablewidgetitem30)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        __qtablewidgetitem31.setFont(font5);
+        self.tblSignos.setHorizontalHeaderItem(3, __qtablewidgetitem31)
+        self.tblSignos.setObjectName(u"tblSignos")
+        self.tblSignos.setFont(font4)
+        self.tblSignos.setStyleSheet(u"QHeaderView::section{\n"
+"	background-color: #ECECEC;\n"
+"	border: 1px solid #8d8d8d;\n"
+"}")
+        self.tblSignos.setTextElideMode(Qt.ElideMiddle)
+
+        self.verticalLayout_2.addWidget(self.tblSignos)
+
+
+        self.verticalLayout_20.addWidget(self.frame_30)
+
+        self.stackedWidget.addWidget(self.pagSignos)
+        self.pagSintomas = QWidget()
+        self.pagSintomas.setObjectName(u"pagSintomas")
+        self.verticalLayout_21 = QVBoxLayout(self.pagSintomas)
+        self.verticalLayout_21.setSpacing(0)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
+        self.frame_70 = QFrame(self.pagSintomas)
+        self.frame_70.setObjectName(u"frame_70")
+        self.frame_70.setMinimumSize(QSize(0, 120))
+        self.frame_70.setFrameShape(QFrame.StyledPanel)
+        self.frame_70.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_35 = QHBoxLayout(self.frame_70)
+        self.horizontalLayout_35.setObjectName(u"horizontalLayout_35")
+        self.horizontalLayout_35.setContentsMargins(20, 20, 20, 20)
+        self.pushButton_20 = QPushButton(self.frame_70)
+        self.pushButton_20.setObjectName(u"pushButton_20")
+        self.pushButton_20.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        icon17 = QIcon()
+        icon17.addFile(u"img/sintomasPag.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_20.setIcon(icon17)
+        self.pushButton_20.setIconSize(QSize(80, 80))
+
+        self.horizontalLayout_35.addWidget(self.pushButton_20)
+
+        self.lblBienvenenida_7 = QLabel(self.frame_70)
+        self.lblBienvenenida_7.setObjectName(u"lblBienvenenida_7")
+        sizePolicy.setHeightForWidth(self.lblBienvenenida_7.sizePolicy().hasHeightForWidth())
+        self.lblBienvenenida_7.setSizePolicy(sizePolicy)
+        self.lblBienvenenida_7.setFont(font2)
+
+        self.horizontalLayout_35.addWidget(self.lblBienvenenida_7)
+
+        self.btnAgregarSintoma = QPushButton(self.frame_70)
+        self.btnAgregarSintoma.setObjectName(u"btnAgregarSintoma")
+        sizePolicy4.setHeightForWidth(self.btnAgregarSintoma.sizePolicy().hasHeightForWidth())
+        self.btnAgregarSintoma.setSizePolicy(sizePolicy4)
+        self.btnAgregarSintoma.setMaximumSize(QSize(16777215, 16777215))
+        self.btnAgregarSintoma.setFont(font3)
+        self.btnAgregarSintoma.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnAgregarSintoma.setLayoutDirection(Qt.LeftToRight)
+        self.btnAgregarSintoma.setStyleSheet(u"QPushButton{\n"
+"	background-color: #0EA5E9;\n"
+"	border: none;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	color: #fff;\n"
+"	margin-left: 20px;\n"
+"	margin-right: 20px;\n"
+"	border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"	background-color: #0284c7;\n"
+"}")
+        self.btnAgregarSintoma.setIcon(icon11)
+        self.btnAgregarSintoma.setIconSize(QSize(20, 50))
+
+        self.horizontalLayout_35.addWidget(self.btnAgregarSintoma)
+
+
+        self.verticalLayout_21.addWidget(self.frame_70, 0, Qt.AlignTop)
+
+        self.frame_31 = QFrame(self.pagSintomas)
+        self.frame_31.setObjectName(u"frame_31")
+        self.frame_31.setMinimumSize(QSize(0, 55))
+        self.frame_31.setFrameShape(QFrame.StyledPanel)
+        self.frame_31.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_37 = QHBoxLayout(self.frame_31)
+        self.horizontalLayout_37.setObjectName(u"horizontalLayout_37")
+        self.horizontalLayout_37.setContentsMargins(100, -1, 100, -1)
+        self.label_35 = QLabel(self.frame_31)
+        self.label_35.setObjectName(u"label_35")
+        sizePolicy1.setHeightForWidth(self.label_35.sizePolicy().hasHeightForWidth())
+        self.label_35.setSizePolicy(sizePolicy1)
+        self.label_35.setFont(font4)
+
+        self.horizontalLayout_37.addWidget(self.label_35)
+
+        self.inpBusquedaCitas_4 = QLineEdit(self.frame_31)
+        self.inpBusquedaCitas_4.setObjectName(u"inpBusquedaCitas_4")
+        sizePolicy5.setHeightForWidth(self.inpBusquedaCitas_4.sizePolicy().hasHeightForWidth())
+        self.inpBusquedaCitas_4.setSizePolicy(sizePolicy5)
+        self.inpBusquedaCitas_4.setFont(font4)
+        self.inpBusquedaCitas_4.setStyleSheet(u"QLineEdit{\n"
+"	border-radius: 10px;\n"
+"	border: 2px solid #8B8B8B;\n"
+"	padding: 10px;\n"
+"	color: #525252;\n"
+"}")
+        self.inpBusquedaCitas_4.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_37.addWidget(self.inpBusquedaCitas_4)
+
+
+        self.verticalLayout_21.addWidget(self.frame_31, 0, Qt.AlignTop)
+
+        self.frame_69 = QFrame(self.pagSintomas)
+        self.frame_69.setObjectName(u"frame_69")
+        sizePolicy.setHeightForWidth(self.frame_69.sizePolicy().hasHeightForWidth())
+        self.frame_69.setSizePolicy(sizePolicy)
+        self.frame_69.setFrameShape(QFrame.StyledPanel)
+        self.frame_69.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_38 = QHBoxLayout(self.frame_69)
+        self.horizontalLayout_38.setObjectName(u"horizontalLayout_38")
+        self.tblSintomas = QTableWidget(self.frame_69)
+        if (self.tblSintomas.columnCount() < 4):
+            self.tblSintomas.setColumnCount(4)
+        __qtablewidgetitem32 = QTableWidgetItem()
+        __qtablewidgetitem32.setFont(font5);
+        self.tblSintomas.setHorizontalHeaderItem(0, __qtablewidgetitem32)
+        __qtablewidgetitem33 = QTableWidgetItem()
+        self.tblSintomas.setHorizontalHeaderItem(1, __qtablewidgetitem33)
+        __qtablewidgetitem34 = QTableWidgetItem()
+        __qtablewidgetitem34.setFont(font5);
+        self.tblSintomas.setHorizontalHeaderItem(2, __qtablewidgetitem34)
+        __qtablewidgetitem35 = QTableWidgetItem()
+        __qtablewidgetitem35.setFont(font5);
+        self.tblSintomas.setHorizontalHeaderItem(3, __qtablewidgetitem35)
+        self.tblSintomas.setObjectName(u"tblSintomas")
+        self.tblSintomas.setFont(font4)
+        self.tblSintomas.setStyleSheet(u"QHeaderView::section{\n"
+"	background-color: #ECECEC;\n"
+"	border: 1px solid #8d8d8d;\n"
+"}")
+        self.tblSintomas.setTextElideMode(Qt.ElideMiddle)
+
+        self.horizontalLayout_38.addWidget(self.tblSintomas)
+
+
+        self.verticalLayout_21.addWidget(self.frame_69)
+
+        self.stackedWidget.addWidget(self.pagSintomas)
         self.pagAgregarUsuario = QWidget()
         self.pagAgregarUsuario.setObjectName(u"pagAgregarUsuario")
         self.verticalLayout_14 = QVBoxLayout(self.pagAgregarUsuario)
@@ -1031,9 +1678,9 @@ class Ui_MainWindow(object):
         self.btnRegresarAUsuarios.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        icon11 = QIcon()
-        icon11.addFile(u"img/back.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnRegresarAUsuarios.setIcon(icon11)
+        icon18 = QIcon()
+        icon18.addFile(u"img/back.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btnRegresarAUsuarios.setIcon(icon18)
         self.btnRegresarAUsuarios.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_13.addWidget(self.btnRegresarAUsuarios, 0, Qt.AlignLeft)
@@ -1090,9 +1737,9 @@ class Ui_MainWindow(object):
 "	background-color: transparent;\n"
 "	border: none;\n"
 "}")
-        icon12 = QIcon()
-        icon12.addFile(u"img/check.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.lblIconoRegistroUsuario.setIcon(icon12)
+        icon19 = QIcon()
+        icon19.addFile(u"img/check.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.lblIconoRegistroUsuario.setIcon(icon19)
         self.lblIconoRegistroUsuario.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_14.addWidget(self.lblIconoRegistroUsuario)
@@ -1305,7 +1952,7 @@ class Ui_MainWindow(object):
         self.btnRegresarAUsuarios2.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        self.btnRegresarAUsuarios2.setIcon(icon11)
+        self.btnRegresarAUsuarios2.setIcon(icon18)
         self.btnRegresarAUsuarios2.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_20.addWidget(self.btnRegresarAUsuarios2, 0, Qt.AlignLeft)
@@ -1377,7 +2024,7 @@ class Ui_MainWindow(object):
 "	background-color: transparent;\n"
 "	border: none;\n"
 "}")
-        self.lblIconoEditarUsuario.setIcon(icon12)
+        self.lblIconoEditarUsuario.setIcon(icon19)
         self.lblIconoEditarUsuario.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_19.addWidget(self.lblIconoEditarUsuario)
@@ -1585,7 +2232,7 @@ class Ui_MainWindow(object):
         self.btnRegresarAPacientes.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        self.btnRegresarAPacientes.setIcon(icon11)
+        self.btnRegresarAPacientes.setIcon(icon18)
         self.btnRegresarAPacientes.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_23.addWidget(self.btnRegresarAPacientes, 0, Qt.AlignLeft)
@@ -1639,7 +2286,7 @@ class Ui_MainWindow(object):
 "	background-color: transparent;\n"
 "	border: none;\n"
 "}")
-        self.lblIconoRegistroPaciente.setIcon(icon12)
+        self.lblIconoRegistroPaciente.setIcon(icon19)
         self.lblIconoRegistroPaciente.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_22.addWidget(self.lblIconoRegistroPaciente)
@@ -1671,6 +2318,7 @@ class Ui_MainWindow(object):
         self.frame_38.setFrameShadow(QFrame.Raised)
         self.gridLayout_14 = QGridLayout(self.frame_38)
         self.gridLayout_14.setObjectName(u"gridLayout_14")
+        self.gridLayout_14.setContentsMargins(-1, 30, -1, -1)
         self.horizontalSpacer_16 = QSpacerItem(207, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout_14.addItem(self.horizontalSpacer_16, 0, 0, 1, 1)
@@ -1851,7 +2499,7 @@ class Ui_MainWindow(object):
         self.btnRegresarAgPacientes.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        self.btnRegresarAgPacientes.setIcon(icon11)
+        self.btnRegresarAgPacientes.setIcon(icon18)
         self.btnRegresarAgPacientes.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_24.addWidget(self.btnRegresarAgPacientes, 0, Qt.AlignLeft)
@@ -1920,7 +2568,7 @@ class Ui_MainWindow(object):
 "	background-color: transparent;\n"
 "	border: none;\n"
 "}")
-        self.lblIconoEditarPaciente.setIcon(icon12)
+        self.lblIconoEditarPaciente.setIcon(icon19)
         self.lblIconoEditarPaciente.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_26.addWidget(self.lblIconoEditarPaciente)
@@ -2133,7 +2781,7 @@ class Ui_MainWindow(object):
         self.btnRegresarACitas.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        self.btnRegresarACitas.setIcon(icon11)
+        self.btnRegresarACitas.setIcon(icon18)
         self.btnRegresarACitas.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_31.addWidget(self.btnRegresarACitas, 0, Qt.AlignLeft)
@@ -2187,7 +2835,7 @@ class Ui_MainWindow(object):
 "	background-color: transparent;\n"
 "	border: none;\n"
 "}")
-        self.lblIconoRegistroCita.setIcon(icon12)
+        self.lblIconoRegistroCita.setIcon(icon19)
         self.lblIconoRegistroCita.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_30.addWidget(self.lblIconoRegistroCita)
@@ -2389,7 +3037,7 @@ class Ui_MainWindow(object):
         self.btnRegresarAgCitas.setStyleSheet(u"QPushButton{\n"
 "	background-color: transparent;\n"
 "}")
-        self.btnRegresarAgCitas.setIcon(icon11)
+        self.btnRegresarAgCitas.setIcon(icon18)
         self.btnRegresarAgCitas.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_32.addWidget(self.btnRegresarAgCitas, 0, Qt.AlignLeft)
@@ -2458,7 +3106,7 @@ class Ui_MainWindow(object):
 "	background-color: transparent;\n"
 "	border: none;\n"
 "}")
-        self.lblIconoEditarCita.setIcon(icon12)
+        self.lblIconoEditarCita.setIcon(icon19)
         self.lblIconoEditarCita.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_34.addWidget(self.lblIconoEditarCita)
@@ -2644,6 +3292,1350 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.frame_64)
 
         self.stackedWidget.addWidget(self.pagEditarCita)
+        self.pagAgregarEnfermedad = QWidget()
+        self.pagAgregarEnfermedad.setObjectName(u"pagAgregarEnfermedad")
+        self.verticalLayout_52 = QVBoxLayout(self.pagAgregarEnfermedad)
+        self.verticalLayout_52.setSpacing(0)
+        self.verticalLayout_52.setObjectName(u"verticalLayout_52")
+        self.verticalLayout_52.setContentsMargins(0, 0, 0, 0)
+        self.frame_84 = QFrame(self.pagAgregarEnfermedad)
+        self.frame_84.setObjectName(u"frame_84")
+        self.frame_84.setMinimumSize(QSize(0, 120))
+        self.frame_84.setFrameShape(QFrame.StyledPanel)
+        self.frame_84.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_48 = QHBoxLayout(self.frame_84)
+        self.horizontalLayout_48.setSpacing(12)
+        self.horizontalLayout_48.setObjectName(u"horizontalLayout_48")
+        self.horizontalLayout_48.setContentsMargins(20, 20, 20, 20)
+        self.btnRegresarAEnfermedades = QPushButton(self.frame_84)
+        self.btnRegresarAEnfermedades.setObjectName(u"btnRegresarAEnfermedades")
+        self.btnRegresarAEnfermedades.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegresarAEnfermedades.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        self.btnRegresarAEnfermedades.setIcon(icon18)
+        self.btnRegresarAEnfermedades.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_48.addWidget(self.btnRegresarAEnfermedades)
+
+        self.lblRegresarAEnfermedades = QLabel(self.frame_84)
+        self.lblRegresarAEnfermedades.setObjectName(u"lblRegresarAEnfermedades")
+        sizePolicy.setHeightForWidth(self.lblRegresarAEnfermedades.sizePolicy().hasHeightForWidth())
+        self.lblRegresarAEnfermedades.setSizePolicy(sizePolicy)
+        self.lblRegresarAEnfermedades.setFont(font6)
+        self.lblRegresarAEnfermedades.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lblRegresarAEnfermedades.setStyleSheet(u"QLabel{\n"
+"	color: #3E3E3E;\n"
+"}")
+
+        self.horizontalLayout_48.addWidget(self.lblRegresarAEnfermedades)
+
+        self.horizontalSpacer_39 = QSpacerItem(560, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_48.addItem(self.horizontalSpacer_39)
+
+
+        self.verticalLayout_52.addWidget(self.frame_84, 0, Qt.AlignTop)
+
+        self.frame_88 = QFrame(self.pagAgregarEnfermedad)
+        self.frame_88.setObjectName(u"frame_88")
+        self.frame_88.setMinimumSize(QSize(0, 70))
+        self.frame_88.setFrameShape(QFrame.StyledPanel)
+        self.frame_88.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_50 = QHBoxLayout(self.frame_88)
+        self.horizontalLayout_50.setObjectName(u"horizontalLayout_50")
+        self.horizontalLayout_50.setContentsMargins(40, -1, 40, -1)
+        self.lblRegistroEnfermedad = QFrame(self.frame_88)
+        self.lblRegistroEnfermedad.setObjectName(u"lblRegistroEnfermedad")
+        self.lblRegistroEnfermedad.setStyleSheet(u"QFrame{\n"
+"	background-color: #22c55e;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.lblRegistroEnfermedad.setFrameShape(QFrame.StyledPanel)
+        self.lblRegistroEnfermedad.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_49 = QHBoxLayout(self.lblRegistroEnfermedad)
+        self.horizontalLayout_49.setObjectName(u"horizontalLayout_49")
+        self.horizontalSpacer_40 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_49.addItem(self.horizontalSpacer_40)
+
+        self.lblIconoRegistroEnfermedad = QPushButton(self.lblRegistroEnfermedad)
+        self.lblIconoRegistroEnfermedad.setObjectName(u"lblIconoRegistroEnfermedad")
+        self.lblIconoRegistroEnfermedad.setMinimumSize(QSize(30, 30))
+        self.lblIconoRegistroEnfermedad.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"	border: none;\n"
+"}")
+        self.lblIconoRegistroEnfermedad.setIcon(icon19)
+        self.lblIconoRegistroEnfermedad.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_49.addWidget(self.lblIconoRegistroEnfermedad)
+
+        self.lblMsjRegistroEnfermedad = QLabel(self.lblRegistroEnfermedad)
+        self.lblMsjRegistroEnfermedad.setObjectName(u"lblMsjRegistroEnfermedad")
+        self.lblMsjRegistroEnfermedad.setFont(font7)
+        self.lblMsjRegistroEnfermedad.setStyleSheet(u"QLabel{\n"
+"	color: #fff;\n"
+"}")
+
+        self.horizontalLayout_49.addWidget(self.lblMsjRegistroEnfermedad)
+
+        self.horizontalSpacer_48 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_49.addItem(self.horizontalSpacer_48)
+
+
+        self.horizontalLayout_50.addWidget(self.lblRegistroEnfermedad)
+
+
+        self.verticalLayout_52.addWidget(self.frame_88, 0, Qt.AlignTop)
+
+        self.frame_89 = QFrame(self.pagAgregarEnfermedad)
+        self.frame_89.setObjectName(u"frame_89")
+        sizePolicy.setHeightForWidth(self.frame_89.sizePolicy().hasHeightForWidth())
+        self.frame_89.setSizePolicy(sizePolicy)
+        self.frame_89.setFrameShape(QFrame.StyledPanel)
+        self.frame_89.setFrameShadow(QFrame.Raised)
+        self.gridLayout_20 = QGridLayout(self.frame_89)
+        self.gridLayout_20.setObjectName(u"gridLayout_20")
+        self.gridLayout_20.setContentsMargins(-1, 30, -1, -1)
+        self.horizontalSpacer_49 = QSpacerItem(239, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_20.addItem(self.horizontalSpacer_49, 0, 0, 1, 1)
+
+        self.frame_90 = QFrame(self.frame_89)
+        self.frame_90.setObjectName(u"frame_90")
+        sizePolicy1.setHeightForWidth(self.frame_90.sizePolicy().hasHeightForWidth())
+        self.frame_90.setSizePolicy(sizePolicy1)
+        self.frame_90.setMinimumSize(QSize(0, 0))
+        self.frame_90.setSizeIncrement(QSize(0, 0))
+        self.frame_90.setStyleSheet(u"QFrame{\n"
+"	border: 2px solid #737373;\n"
+"	border-radius: 8px;\n"
+"}")
+        self.frame_90.setFrameShape(QFrame.StyledPanel)
+        self.frame_90.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_56 = QVBoxLayout(self.frame_90)
+        self.verticalLayout_56.setSpacing(14)
+        self.verticalLayout_56.setObjectName(u"verticalLayout_56")
+        self.frame_91 = QFrame(self.frame_90)
+        self.frame_91.setObjectName(u"frame_91")
+        self.frame_91.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_91.setFrameShape(QFrame.StyledPanel)
+        self.frame_91.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_57 = QVBoxLayout(self.frame_91)
+        self.verticalLayout_57.setObjectName(u"verticalLayout_57")
+        self.label_38 = QLabel(self.frame_91)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setFont(font1)
+        self.label_38.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_57.addWidget(self.label_38, 0, Qt.AlignTop)
+
+        self.inpRegistroEnfermedad = QLineEdit(self.frame_91)
+        self.inpRegistroEnfermedad.setObjectName(u"inpRegistroEnfermedad")
+        self.inpRegistroEnfermedad.setMinimumSize(QSize(0, 30))
+        self.inpRegistroEnfermedad.setFont(font4)
+        self.inpRegistroEnfermedad.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_57.addWidget(self.inpRegistroEnfermedad)
+
+
+        self.verticalLayout_56.addWidget(self.frame_91, 0, Qt.AlignTop)
+
+        self.frame_92 = QFrame(self.frame_90)
+        self.frame_92.setObjectName(u"frame_92")
+        self.frame_92.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_92.setFrameShape(QFrame.StyledPanel)
+        self.frame_92.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_58 = QVBoxLayout(self.frame_92)
+        self.verticalLayout_58.setObjectName(u"verticalLayout_58")
+        self.label_40 = QLabel(self.frame_92)
+        self.label_40.setObjectName(u"label_40")
+        self.label_40.setFont(font1)
+        self.label_40.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_58.addWidget(self.label_40, 0, Qt.AlignTop)
+
+        self.inpRegistroESigno = QLineEdit(self.frame_92)
+        self.inpRegistroESigno.setObjectName(u"inpRegistroESigno")
+        self.inpRegistroESigno.setMinimumSize(QSize(0, 30))
+        self.inpRegistroESigno.setFont(font4)
+        self.inpRegistroESigno.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_58.addWidget(self.inpRegistroESigno)
+
+
+        self.verticalLayout_56.addWidget(self.frame_92, 0, Qt.AlignTop)
+
+        self.frame_93 = QFrame(self.frame_90)
+        self.frame_93.setObjectName(u"frame_93")
+        self.frame_93.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_93.setFrameShape(QFrame.StyledPanel)
+        self.frame_93.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_59 = QVBoxLayout(self.frame_93)
+        self.verticalLayout_59.setObjectName(u"verticalLayout_59")
+        self.label_41 = QLabel(self.frame_93)
+        self.label_41.setObjectName(u"label_41")
+        self.label_41.setFont(font1)
+        self.label_41.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_59.addWidget(self.label_41, 0, Qt.AlignTop)
+
+        self.inpRegistroESintoma = QLineEdit(self.frame_93)
+        self.inpRegistroESintoma.setObjectName(u"inpRegistroESintoma")
+        self.inpRegistroESintoma.setFont(font4)
+        self.inpRegistroESintoma.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_59.addWidget(self.inpRegistroESintoma)
+
+
+        self.verticalLayout_56.addWidget(self.frame_93)
+
+        self.btnRegistroEnfermedadSubmit = QPushButton(self.frame_90)
+        self.btnRegistroEnfermedadSubmit.setObjectName(u"btnRegistroEnfermedadSubmit")
+        self.btnRegistroEnfermedadSubmit.setFont(font1)
+        self.btnRegistroEnfermedadSubmit.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegistroEnfermedadSubmit.setStyleSheet(u"QPushButton{\n"
+"	background-color: #3b82f6;\n"
+"	padding: 12px;\n"
+"	border-radius: 8px;\n"
+"	color: #fff;\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: #2563eb;\n"
+"}")
+
+        self.verticalLayout_56.addWidget(self.btnRegistroEnfermedadSubmit)
+
+
+        self.gridLayout_20.addWidget(self.frame_90, 0, 1, 1, 1)
+
+        self.horizontalSpacer_50 = QSpacerItem(239, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_20.addItem(self.horizontalSpacer_50, 0, 2, 1, 1)
+
+        self.verticalSpacer_11 = QSpacerItem(20, 132, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_20.addItem(self.verticalSpacer_11, 1, 1, 1, 1)
+
+
+        self.verticalLayout_52.addWidget(self.frame_89)
+
+        self.stackedWidget.addWidget(self.pagAgregarEnfermedad)
+        self.pagEditarEnfermedad = QWidget()
+        self.pagEditarEnfermedad.setObjectName(u"pagEditarEnfermedad")
+        self.verticalLayout_60 = QVBoxLayout(self.pagEditarEnfermedad)
+        self.verticalLayout_60.setSpacing(0)
+        self.verticalLayout_60.setObjectName(u"verticalLayout_60")
+        self.verticalLayout_60.setContentsMargins(0, 0, 0, 0)
+        self.frame_96 = QFrame(self.pagEditarEnfermedad)
+        self.frame_96.setObjectName(u"frame_96")
+        self.frame_96.setMinimumSize(QSize(0, 120))
+        self.frame_96.setFrameShape(QFrame.StyledPanel)
+        self.frame_96.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_51 = QHBoxLayout(self.frame_96)
+        self.horizontalLayout_51.setObjectName(u"horizontalLayout_51")
+        self.horizontalLayout_51.setContentsMargins(20, 20, 20, 20)
+        self.btnRegresarAgEnfermedades = QPushButton(self.frame_96)
+        self.btnRegresarAgEnfermedades.setObjectName(u"btnRegresarAgEnfermedades")
+        self.btnRegresarAgEnfermedades.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegresarAgEnfermedades.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        self.btnRegresarAgEnfermedades.setIcon(icon18)
+        self.btnRegresarAgEnfermedades.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_51.addWidget(self.btnRegresarAgEnfermedades)
+
+        self.lblRegresarAgEnfermedades = QLabel(self.frame_96)
+        self.lblRegresarAgEnfermedades.setObjectName(u"lblRegresarAgEnfermedades")
+        sizePolicy.setHeightForWidth(self.lblRegresarAgEnfermedades.sizePolicy().hasHeightForWidth())
+        self.lblRegresarAgEnfermedades.setSizePolicy(sizePolicy)
+        self.lblRegresarAgEnfermedades.setFont(font6)
+        self.lblRegresarAgEnfermedades.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lblRegresarAgEnfermedades.setStyleSheet(u"QLabel{\n"
+"	color: #3E3E3E;\n"
+"}")
+
+        self.horizontalLayout_51.addWidget(self.lblRegresarAgEnfermedades)
+
+        self.label_6 = QLabel(self.frame_96)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setFont(font8)
+        self.label_6.setStyleSheet(u"QLabel{\n"
+"	margin-left: 20px;\n"
+"}")
+
+        self.horizontalLayout_51.addWidget(self.label_6)
+
+        self.lblEditarEnfermedadActual = QLabel(self.frame_96)
+        self.lblEditarEnfermedadActual.setObjectName(u"lblEditarEnfermedadActual")
+        self.lblEditarEnfermedadActual.setFont(font8)
+
+        self.horizontalLayout_51.addWidget(self.lblEditarEnfermedadActual)
+
+        self.horizontalSpacer_51 = QSpacerItem(244, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_51.addItem(self.horizontalSpacer_51)
+
+
+        self.verticalLayout_60.addWidget(self.frame_96, 0, Qt.AlignTop)
+
+        self.frame_94 = QFrame(self.pagEditarEnfermedad)
+        self.frame_94.setObjectName(u"frame_94")
+        self.frame_94.setMinimumSize(QSize(0, 70))
+        self.frame_94.setFrameShape(QFrame.StyledPanel)
+        self.frame_94.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_53 = QHBoxLayout(self.frame_94)
+        self.horizontalLayout_53.setObjectName(u"horizontalLayout_53")
+        self.horizontalLayout_53.setContentsMargins(40, -1, 40, -1)
+        self.lblEditarEnfermedad = QFrame(self.frame_94)
+        self.lblEditarEnfermedad.setObjectName(u"lblEditarEnfermedad")
+        self.lblEditarEnfermedad.setStyleSheet(u"QFrame{\n"
+"	background-color: #22c55e;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.lblEditarEnfermedad.setFrameShape(QFrame.StyledPanel)
+        self.lblEditarEnfermedad.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_52 = QHBoxLayout(self.lblEditarEnfermedad)
+        self.horizontalLayout_52.setObjectName(u"horizontalLayout_52")
+        self.horizontalSpacer_54 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_52.addItem(self.horizontalSpacer_54)
+
+        self.lblIconoEditarEnfermedad = QPushButton(self.lblEditarEnfermedad)
+        self.lblIconoEditarEnfermedad.setObjectName(u"lblIconoEditarEnfermedad")
+        self.lblIconoEditarEnfermedad.setMinimumSize(QSize(30, 30))
+        self.lblIconoEditarEnfermedad.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"	border: none;\n"
+"}")
+        self.lblIconoEditarEnfermedad.setIcon(icon19)
+        self.lblIconoEditarEnfermedad.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_52.addWidget(self.lblIconoEditarEnfermedad)
+
+        self.lblMsjEditarEnfermedad = QLabel(self.lblEditarEnfermedad)
+        self.lblMsjEditarEnfermedad.setObjectName(u"lblMsjEditarEnfermedad")
+        self.lblMsjEditarEnfermedad.setFont(font7)
+        self.lblMsjEditarEnfermedad.setStyleSheet(u"QLabel{\n"
+"	color: #fff;\n"
+"}")
+
+        self.horizontalLayout_52.addWidget(self.lblMsjEditarEnfermedad)
+
+        self.horizontalSpacer_55 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_52.addItem(self.horizontalSpacer_55)
+
+
+        self.horizontalLayout_53.addWidget(self.lblEditarEnfermedad)
+
+
+        self.verticalLayout_60.addWidget(self.frame_94, 0, Qt.AlignTop)
+
+        self.frame_95 = QFrame(self.pagEditarEnfermedad)
+        self.frame_95.setObjectName(u"frame_95")
+        sizePolicy.setHeightForWidth(self.frame_95.sizePolicy().hasHeightForWidth())
+        self.frame_95.setSizePolicy(sizePolicy)
+        self.frame_95.setFrameShape(QFrame.StyledPanel)
+        self.frame_95.setFrameShadow(QFrame.Raised)
+        self.gridLayout_21 = QGridLayout(self.frame_95)
+        self.gridLayout_21.setObjectName(u"gridLayout_21")
+        self.gridLayout_21.setContentsMargins(-1, 30, -1, -1)
+        self.horizontalSpacer_53 = QSpacerItem(239, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_21.addItem(self.horizontalSpacer_53, 0, 0, 1, 1)
+
+        self.frame_97 = QFrame(self.frame_95)
+        self.frame_97.setObjectName(u"frame_97")
+        sizePolicy1.setHeightForWidth(self.frame_97.sizePolicy().hasHeightForWidth())
+        self.frame_97.setSizePolicy(sizePolicy1)
+        self.frame_97.setMinimumSize(QSize(0, 0))
+        self.frame_97.setSizeIncrement(QSize(0, 0))
+        self.frame_97.setStyleSheet(u"QFrame{\n"
+"	border: 2px solid #737373;\n"
+"	border-radius: 8px;\n"
+"}")
+        self.frame_97.setFrameShape(QFrame.StyledPanel)
+        self.frame_97.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_61 = QVBoxLayout(self.frame_97)
+        self.verticalLayout_61.setSpacing(14)
+        self.verticalLayout_61.setObjectName(u"verticalLayout_61")
+        self.frame_98 = QFrame(self.frame_97)
+        self.frame_98.setObjectName(u"frame_98")
+        self.frame_98.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_98.setFrameShape(QFrame.StyledPanel)
+        self.frame_98.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_62 = QVBoxLayout(self.frame_98)
+        self.verticalLayout_62.setObjectName(u"verticalLayout_62")
+        self.label_42 = QLabel(self.frame_98)
+        self.label_42.setObjectName(u"label_42")
+        self.label_42.setFont(font1)
+        self.label_42.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_62.addWidget(self.label_42, 0, Qt.AlignTop)
+
+        self.inpEditarEnfermedad = QLineEdit(self.frame_98)
+        self.inpEditarEnfermedad.setObjectName(u"inpEditarEnfermedad")
+        self.inpEditarEnfermedad.setMinimumSize(QSize(0, 30))
+        self.inpEditarEnfermedad.setFont(font4)
+        self.inpEditarEnfermedad.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_62.addWidget(self.inpEditarEnfermedad)
+
+
+        self.verticalLayout_61.addWidget(self.frame_98, 0, Qt.AlignTop)
+
+        self.frame_99 = QFrame(self.frame_97)
+        self.frame_99.setObjectName(u"frame_99")
+        self.frame_99.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_99.setFrameShape(QFrame.StyledPanel)
+        self.frame_99.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_63 = QVBoxLayout(self.frame_99)
+        self.verticalLayout_63.setObjectName(u"verticalLayout_63")
+        self.label_43 = QLabel(self.frame_99)
+        self.label_43.setObjectName(u"label_43")
+        self.label_43.setFont(font1)
+        self.label_43.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_63.addWidget(self.label_43, 0, Qt.AlignTop)
+
+        self.inpEditarESigno = QLineEdit(self.frame_99)
+        self.inpEditarESigno.setObjectName(u"inpEditarESigno")
+        self.inpEditarESigno.setMinimumSize(QSize(0, 30))
+        self.inpEditarESigno.setFont(font4)
+        self.inpEditarESigno.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_63.addWidget(self.inpEditarESigno)
+
+
+        self.verticalLayout_61.addWidget(self.frame_99, 0, Qt.AlignTop)
+
+        self.frame_100 = QFrame(self.frame_97)
+        self.frame_100.setObjectName(u"frame_100")
+        self.frame_100.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_100.setFrameShape(QFrame.StyledPanel)
+        self.frame_100.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_64 = QVBoxLayout(self.frame_100)
+        self.verticalLayout_64.setObjectName(u"verticalLayout_64")
+        self.label_44 = QLabel(self.frame_100)
+        self.label_44.setObjectName(u"label_44")
+        self.label_44.setFont(font1)
+        self.label_44.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_64.addWidget(self.label_44, 0, Qt.AlignTop)
+
+        self.inpEditarESintoma = QLineEdit(self.frame_100)
+        self.inpEditarESintoma.setObjectName(u"inpEditarESintoma")
+        self.inpEditarESintoma.setFont(font4)
+        self.inpEditarESintoma.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_64.addWidget(self.inpEditarESintoma)
+
+
+        self.verticalLayout_61.addWidget(self.frame_100)
+
+        self.btnEditarEnfermedadSubmit = QPushButton(self.frame_97)
+        self.btnEditarEnfermedadSubmit.setObjectName(u"btnEditarEnfermedadSubmit")
+        self.btnEditarEnfermedadSubmit.setFont(font1)
+        self.btnEditarEnfermedadSubmit.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnEditarEnfermedadSubmit.setStyleSheet(u"QPushButton{\n"
+"	background-color: #3b82f6;\n"
+"	padding: 12px;\n"
+"	border-radius: 8px;\n"
+"	color: #fff;\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: #2563eb;\n"
+"}")
+
+        self.verticalLayout_61.addWidget(self.btnEditarEnfermedadSubmit)
+
+
+        self.gridLayout_21.addWidget(self.frame_97, 0, 1, 1, 1)
+
+        self.horizontalSpacer_52 = QSpacerItem(239, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_21.addItem(self.horizontalSpacer_52, 0, 2, 1, 1)
+
+        self.verticalSpacer_12 = QSpacerItem(20, 132, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_21.addItem(self.verticalSpacer_12, 1, 1, 1, 1)
+
+
+        self.verticalLayout_60.addWidget(self.frame_95)
+
+        self.stackedWidget.addWidget(self.pagEditarEnfermedad)
+        self.pagAgregarSintoma = QWidget()
+        self.pagAgregarSintoma.setObjectName(u"pagAgregarSintoma")
+        self.verticalLayout_48 = QVBoxLayout(self.pagAgregarSintoma)
+        self.verticalLayout_48.setSpacing(0)
+        self.verticalLayout_48.setObjectName(u"verticalLayout_48")
+        self.verticalLayout_48.setContentsMargins(0, 0, 0, 0)
+        self.frame_71 = QFrame(self.pagAgregarSintoma)
+        self.frame_71.setObjectName(u"frame_71")
+        self.frame_71.setMinimumSize(QSize(0, 120))
+        self.frame_71.setFrameShape(QFrame.StyledPanel)
+        self.frame_71.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_39 = QHBoxLayout(self.frame_71)
+        self.horizontalLayout_39.setSpacing(12)
+        self.horizontalLayout_39.setObjectName(u"horizontalLayout_39")
+        self.horizontalLayout_39.setContentsMargins(20, 20, 20, 20)
+        self.btnRegresarASintomas = QPushButton(self.frame_71)
+        self.btnRegresarASintomas.setObjectName(u"btnRegresarASintomas")
+        self.btnRegresarASintomas.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegresarASintomas.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        self.btnRegresarASintomas.setIcon(icon18)
+        self.btnRegresarASintomas.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_39.addWidget(self.btnRegresarASintomas)
+
+        self.lblRegresarASintomas = QLabel(self.frame_71)
+        self.lblRegresarASintomas.setObjectName(u"lblRegresarASintomas")
+        sizePolicy.setHeightForWidth(self.lblRegresarASintomas.sizePolicy().hasHeightForWidth())
+        self.lblRegresarASintomas.setSizePolicy(sizePolicy)
+        self.lblRegresarASintomas.setFont(font6)
+        self.lblRegresarASintomas.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lblRegresarASintomas.setStyleSheet(u"QLabel{\n"
+"	color: #3E3E3E;\n"
+"}")
+
+        self.horizontalLayout_39.addWidget(self.lblRegresarASintomas)
+
+        self.horizontalSpacer_36 = QSpacerItem(563, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_39.addItem(self.horizontalSpacer_36)
+
+
+        self.verticalLayout_48.addWidget(self.frame_71, 0, Qt.AlignTop)
+
+        self.frame_73 = QFrame(self.pagAgregarSintoma)
+        self.frame_73.setObjectName(u"frame_73")
+        self.frame_73.setMinimumSize(QSize(0, 70))
+        self.frame_73.setFrameShape(QFrame.StyledPanel)
+        self.frame_73.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_41 = QHBoxLayout(self.frame_73)
+        self.horizontalLayout_41.setObjectName(u"horizontalLayout_41")
+        self.horizontalLayout_41.setContentsMargins(40, -1, 40, -1)
+        self.lblRegistroSintoma = QFrame(self.frame_73)
+        self.lblRegistroSintoma.setObjectName(u"lblRegistroSintoma")
+        self.lblRegistroSintoma.setStyleSheet(u"QFrame{\n"
+"	background-color: #22c55e;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.lblRegistroSintoma.setFrameShape(QFrame.StyledPanel)
+        self.lblRegistroSintoma.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_40 = QHBoxLayout(self.lblRegistroSintoma)
+        self.horizontalLayout_40.setObjectName(u"horizontalLayout_40")
+        self.horizontalSpacer_37 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_40.addItem(self.horizontalSpacer_37)
+
+        self.lblIconoRegistroSintoma = QPushButton(self.lblRegistroSintoma)
+        self.lblIconoRegistroSintoma.setObjectName(u"lblIconoRegistroSintoma")
+        self.lblIconoRegistroSintoma.setMinimumSize(QSize(30, 30))
+        self.lblIconoRegistroSintoma.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"	border: none;\n"
+"}")
+        self.lblIconoRegistroSintoma.setIcon(icon19)
+        self.lblIconoRegistroSintoma.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_40.addWidget(self.lblIconoRegistroSintoma)
+
+        self.lblMsjRegistroSintoma = QLabel(self.lblRegistroSintoma)
+        self.lblMsjRegistroSintoma.setObjectName(u"lblMsjRegistroSintoma")
+        self.lblMsjRegistroSintoma.setFont(font7)
+        self.lblMsjRegistroSintoma.setStyleSheet(u"QLabel{\n"
+"	color: #fff;\n"
+"}")
+
+        self.horizontalLayout_40.addWidget(self.lblMsjRegistroSintoma)
+
+        self.horizontalSpacer_38 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_40.addItem(self.horizontalSpacer_38)
+
+
+        self.horizontalLayout_41.addWidget(self.lblRegistroSintoma)
+
+
+        self.verticalLayout_48.addWidget(self.frame_73, 0, Qt.AlignTop)
+
+        self.frame_72 = QFrame(self.pagAgregarSintoma)
+        self.frame_72.setObjectName(u"frame_72")
+        sizePolicy.setHeightForWidth(self.frame_72.sizePolicy().hasHeightForWidth())
+        self.frame_72.setSizePolicy(sizePolicy)
+        self.frame_72.setFrameShape(QFrame.StyledPanel)
+        self.frame_72.setFrameShadow(QFrame.Raised)
+        self.gridLayout_3 = QGridLayout(self.frame_72)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_3.setContentsMargins(-1, 30, -1, -1)
+        self.horizontalSpacer_41 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_3.addItem(self.horizontalSpacer_41, 0, 0, 1, 1)
+
+        self.frame_74 = QFrame(self.frame_72)
+        self.frame_74.setObjectName(u"frame_74")
+        sizePolicy1.setHeightForWidth(self.frame_74.sizePolicy().hasHeightForWidth())
+        self.frame_74.setSizePolicy(sizePolicy1)
+        self.frame_74.setMinimumSize(QSize(0, 0))
+        self.frame_74.setSizeIncrement(QSize(0, 0))
+        self.frame_74.setStyleSheet(u"QFrame{\n"
+"	border: 2px solid #737373;\n"
+"	border-radius: 8px;\n"
+"}")
+        self.frame_74.setFrameShape(QFrame.StyledPanel)
+        self.frame_74.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_49 = QVBoxLayout(self.frame_74)
+        self.verticalLayout_49.setSpacing(14)
+        self.verticalLayout_49.setObjectName(u"verticalLayout_49")
+        self.frame_75 = QFrame(self.frame_74)
+        self.frame_75.setObjectName(u"frame_75")
+        self.frame_75.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_75.setFrameShape(QFrame.StyledPanel)
+        self.frame_75.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_50 = QVBoxLayout(self.frame_75)
+        self.verticalLayout_50.setObjectName(u"verticalLayout_50")
+        self.label_36 = QLabel(self.frame_75)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setFont(font1)
+        self.label_36.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_50.addWidget(self.label_36, 0, Qt.AlignTop)
+
+        self.inpRegistroSintoma = QLineEdit(self.frame_75)
+        self.inpRegistroSintoma.setObjectName(u"inpRegistroSintoma")
+        self.inpRegistroSintoma.setMinimumSize(QSize(0, 30))
+        self.inpRegistroSintoma.setFont(font4)
+        self.inpRegistroSintoma.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_50.addWidget(self.inpRegistroSintoma)
+
+
+        self.verticalLayout_49.addWidget(self.frame_75, 0, Qt.AlignTop)
+
+        self.btnRegistroSintomaSubmit = QPushButton(self.frame_74)
+        self.btnRegistroSintomaSubmit.setObjectName(u"btnRegistroSintomaSubmit")
+        self.btnRegistroSintomaSubmit.setFont(font1)
+        self.btnRegistroSintomaSubmit.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegistroSintomaSubmit.setStyleSheet(u"QPushButton{\n"
+"	background-color: #3b82f6;\n"
+"	padding: 12px;\n"
+"	border-radius: 8px;\n"
+"	color: #fff;\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: #2563eb;\n"
+"}")
+
+        self.verticalLayout_49.addWidget(self.btnRegistroSintomaSubmit)
+
+
+        self.gridLayout_3.addWidget(self.frame_74, 0, 1, 1, 1)
+
+        self.horizontalSpacer_42 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_3.addItem(self.horizontalSpacer_42, 0, 2, 1, 1)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 132, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_3.addItem(self.verticalSpacer_9, 1, 1, 1, 1)
+
+
+        self.verticalLayout_48.addWidget(self.frame_72)
+
+        self.stackedWidget.addWidget(self.pagAgregarSintoma)
+        self.pagEditarSintoma = QWidget()
+        self.pagEditarSintoma.setObjectName(u"pagEditarSintoma")
+        self.verticalLayout_65 = QVBoxLayout(self.pagEditarSintoma)
+        self.verticalLayout_65.setSpacing(0)
+        self.verticalLayout_65.setObjectName(u"verticalLayout_65")
+        self.verticalLayout_65.setContentsMargins(0, 0, 0, 0)
+        self.frame_101 = QFrame(self.pagEditarSintoma)
+        self.frame_101.setObjectName(u"frame_101")
+        self.frame_101.setMinimumSize(QSize(0, 120))
+        self.frame_101.setFrameShape(QFrame.StyledPanel)
+        self.frame_101.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_54 = QHBoxLayout(self.frame_101)
+        self.horizontalLayout_54.setObjectName(u"horizontalLayout_54")
+        self.horizontalLayout_54.setContentsMargins(20, 20, 20, 20)
+        self.btnRegresarAgSintomas = QPushButton(self.frame_101)
+        self.btnRegresarAgSintomas.setObjectName(u"btnRegresarAgSintomas")
+        self.btnRegresarAgSintomas.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegresarAgSintomas.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        self.btnRegresarAgSintomas.setIcon(icon18)
+        self.btnRegresarAgSintomas.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_54.addWidget(self.btnRegresarAgSintomas)
+
+        self.lblRegresarAgSintomas = QLabel(self.frame_101)
+        self.lblRegresarAgSintomas.setObjectName(u"lblRegresarAgSintomas")
+        sizePolicy.setHeightForWidth(self.lblRegresarAgSintomas.sizePolicy().hasHeightForWidth())
+        self.lblRegresarAgSintomas.setSizePolicy(sizePolicy)
+        self.lblRegresarAgSintomas.setFont(font6)
+        self.lblRegresarAgSintomas.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lblRegresarAgSintomas.setStyleSheet(u"QLabel{\n"
+"	color: #3E3E3E;\n"
+"}")
+
+        self.horizontalLayout_54.addWidget(self.lblRegresarAgSintomas)
+
+        self.label_8 = QLabel(self.frame_101)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setFont(font8)
+        self.label_8.setStyleSheet(u"QLabel{\n"
+"	margin-left: 20px;\n"
+"}")
+
+        self.horizontalLayout_54.addWidget(self.label_8)
+
+        self.lblEditarSintomaActual = QLabel(self.frame_101)
+        self.lblEditarSintomaActual.setObjectName(u"lblEditarSintomaActual")
+        self.lblEditarSintomaActual.setFont(font8)
+
+        self.horizontalLayout_54.addWidget(self.lblEditarSintomaActual)
+
+        self.horizontalSpacer_56 = QSpacerItem(291, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_54.addItem(self.horizontalSpacer_56)
+
+
+        self.verticalLayout_65.addWidget(self.frame_101, 0, Qt.AlignTop)
+
+        self.frame_102 = QFrame(self.pagEditarSintoma)
+        self.frame_102.setObjectName(u"frame_102")
+        self.frame_102.setMinimumSize(QSize(0, 70))
+        self.frame_102.setFrameShape(QFrame.StyledPanel)
+        self.frame_102.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_56 = QHBoxLayout(self.frame_102)
+        self.horizontalLayout_56.setObjectName(u"horizontalLayout_56")
+        self.horizontalLayout_56.setContentsMargins(40, -1, 40, -1)
+        self.lblEditarSintoma = QFrame(self.frame_102)
+        self.lblEditarSintoma.setObjectName(u"lblEditarSintoma")
+        self.lblEditarSintoma.setStyleSheet(u"QFrame{\n"
+"	background-color: #22c55e;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.lblEditarSintoma.setFrameShape(QFrame.StyledPanel)
+        self.lblEditarSintoma.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_55 = QHBoxLayout(self.lblEditarSintoma)
+        self.horizontalLayout_55.setObjectName(u"horizontalLayout_55")
+        self.horizontalSpacer_59 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_55.addItem(self.horizontalSpacer_59)
+
+        self.lblIconoEditarSintoma = QPushButton(self.lblEditarSintoma)
+        self.lblIconoEditarSintoma.setObjectName(u"lblIconoEditarSintoma")
+        self.lblIconoEditarSintoma.setMinimumSize(QSize(30, 30))
+        self.lblIconoEditarSintoma.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"	border: none;\n"
+"}")
+        self.lblIconoEditarSintoma.setIcon(icon19)
+        self.lblIconoEditarSintoma.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_55.addWidget(self.lblIconoEditarSintoma)
+
+        self.lblMsjEditarSintoma = QLabel(self.lblEditarSintoma)
+        self.lblMsjEditarSintoma.setObjectName(u"lblMsjEditarSintoma")
+        self.lblMsjEditarSintoma.setFont(font7)
+        self.lblMsjEditarSintoma.setStyleSheet(u"QLabel{\n"
+"	color: #fff;\n"
+"}")
+
+        self.horizontalLayout_55.addWidget(self.lblMsjEditarSintoma)
+
+        self.horizontalSpacer_60 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_55.addItem(self.horizontalSpacer_60)
+
+
+        self.horizontalLayout_56.addWidget(self.lblEditarSintoma)
+
+
+        self.verticalLayout_65.addWidget(self.frame_102, 0, Qt.AlignTop)
+
+        self.frame_103 = QFrame(self.pagEditarSintoma)
+        self.frame_103.setObjectName(u"frame_103")
+        sizePolicy.setHeightForWidth(self.frame_103.sizePolicy().hasHeightForWidth())
+        self.frame_103.setSizePolicy(sizePolicy)
+        self.frame_103.setFrameShape(QFrame.StyledPanel)
+        self.frame_103.setFrameShadow(QFrame.Raised)
+        self.gridLayout_22 = QGridLayout(self.frame_103)
+        self.gridLayout_22.setObjectName(u"gridLayout_22")
+        self.gridLayout_22.setContentsMargins(-1, 30, -1, -1)
+        self.horizontalSpacer_58 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_22.addItem(self.horizontalSpacer_58, 0, 0, 1, 1)
+
+        self.frame_104 = QFrame(self.frame_103)
+        self.frame_104.setObjectName(u"frame_104")
+        sizePolicy1.setHeightForWidth(self.frame_104.sizePolicy().hasHeightForWidth())
+        self.frame_104.setSizePolicy(sizePolicy1)
+        self.frame_104.setMinimumSize(QSize(0, 0))
+        self.frame_104.setSizeIncrement(QSize(0, 0))
+        self.frame_104.setStyleSheet(u"QFrame{\n"
+"	border: 2px solid #737373;\n"
+"	border-radius: 8px;\n"
+"}")
+        self.frame_104.setFrameShape(QFrame.StyledPanel)
+        self.frame_104.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_66 = QVBoxLayout(self.frame_104)
+        self.verticalLayout_66.setSpacing(14)
+        self.verticalLayout_66.setObjectName(u"verticalLayout_66")
+        self.frame_105 = QFrame(self.frame_104)
+        self.frame_105.setObjectName(u"frame_105")
+        self.frame_105.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_105.setFrameShape(QFrame.StyledPanel)
+        self.frame_105.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_67 = QVBoxLayout(self.frame_105)
+        self.verticalLayout_67.setObjectName(u"verticalLayout_67")
+        self.label_45 = QLabel(self.frame_105)
+        self.label_45.setObjectName(u"label_45")
+        self.label_45.setFont(font1)
+        self.label_45.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_67.addWidget(self.label_45, 0, Qt.AlignTop)
+
+        self.inpEditarSintoma = QLineEdit(self.frame_105)
+        self.inpEditarSintoma.setObjectName(u"inpEditarSintoma")
+        self.inpEditarSintoma.setMinimumSize(QSize(0, 30))
+        self.inpEditarSintoma.setFont(font4)
+        self.inpEditarSintoma.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_67.addWidget(self.inpEditarSintoma)
+
+
+        self.verticalLayout_66.addWidget(self.frame_105, 0, Qt.AlignTop)
+
+        self.btnEditarSintomaSubmit = QPushButton(self.frame_104)
+        self.btnEditarSintomaSubmit.setObjectName(u"btnEditarSintomaSubmit")
+        self.btnEditarSintomaSubmit.setFont(font1)
+        self.btnEditarSintomaSubmit.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnEditarSintomaSubmit.setStyleSheet(u"QPushButton{\n"
+"	background-color: #3b82f6;\n"
+"	padding: 12px;\n"
+"	border-radius: 8px;\n"
+"	color: #fff;\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: #2563eb;\n"
+"}")
+
+        self.verticalLayout_66.addWidget(self.btnEditarSintomaSubmit)
+
+
+        self.gridLayout_22.addWidget(self.frame_104, 0, 1, 1, 1)
+
+        self.horizontalSpacer_57 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_22.addItem(self.horizontalSpacer_57, 0, 2, 1, 1)
+
+        self.verticalSpacer_13 = QSpacerItem(20, 306, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_22.addItem(self.verticalSpacer_13, 1, 1, 1, 1)
+
+
+        self.verticalLayout_65.addWidget(self.frame_103)
+
+        self.stackedWidget.addWidget(self.pagEditarSintoma)
+        self.pagAgregarSigno = QWidget()
+        self.pagAgregarSigno.setObjectName(u"pagAgregarSigno")
+        self.verticalLayout_53 = QVBoxLayout(self.pagAgregarSigno)
+        self.verticalLayout_53.setSpacing(0)
+        self.verticalLayout_53.setObjectName(u"verticalLayout_53")
+        self.verticalLayout_53.setContentsMargins(0, 0, 0, 0)
+        self.frame_78 = QFrame(self.pagAgregarSigno)
+        self.frame_78.setObjectName(u"frame_78")
+        self.frame_78.setMinimumSize(QSize(0, 120))
+        self.frame_78.setFrameShape(QFrame.StyledPanel)
+        self.frame_78.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_43 = QHBoxLayout(self.frame_78)
+        self.horizontalLayout_43.setSpacing(12)
+        self.horizontalLayout_43.setObjectName(u"horizontalLayout_43")
+        self.horizontalLayout_43.setContentsMargins(20, 20, 20, 20)
+        self.btnRegresarASignos = QPushButton(self.frame_78)
+        self.btnRegresarASignos.setObjectName(u"btnRegresarASignos")
+        self.btnRegresarASignos.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegresarASignos.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        self.btnRegresarASignos.setIcon(icon18)
+        self.btnRegresarASignos.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_43.addWidget(self.btnRegresarASignos)
+
+        self.lblRegresarASignos = QLabel(self.frame_78)
+        self.lblRegresarASignos.setObjectName(u"lblRegresarASignos")
+        sizePolicy.setHeightForWidth(self.lblRegresarASignos.sizePolicy().hasHeightForWidth())
+        self.lblRegresarASignos.setSizePolicy(sizePolicy)
+        self.lblRegresarASignos.setFont(font6)
+        self.lblRegresarASignos.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lblRegresarASignos.setStyleSheet(u"QLabel{\n"
+"	color: #3E3E3E;\n"
+"}")
+
+        self.horizontalLayout_43.addWidget(self.lblRegresarASignos)
+
+        self.horizontalSpacer_43 = QSpacerItem(563, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_43.addItem(self.horizontalSpacer_43)
+
+
+        self.verticalLayout_53.addWidget(self.frame_78, 0, Qt.AlignTop)
+
+        self.frame_79 = QFrame(self.pagAgregarSigno)
+        self.frame_79.setObjectName(u"frame_79")
+        self.frame_79.setMinimumSize(QSize(0, 70))
+        self.frame_79.setFrameShape(QFrame.StyledPanel)
+        self.frame_79.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_45 = QHBoxLayout(self.frame_79)
+        self.horizontalLayout_45.setObjectName(u"horizontalLayout_45")
+        self.horizontalLayout_45.setContentsMargins(40, -1, 40, -1)
+        self.lblRegistroSigno = QFrame(self.frame_79)
+        self.lblRegistroSigno.setObjectName(u"lblRegistroSigno")
+        self.lblRegistroSigno.setStyleSheet(u"QFrame{\n"
+"	background-color: #22c55e;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.lblRegistroSigno.setFrameShape(QFrame.StyledPanel)
+        self.lblRegistroSigno.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_44 = QHBoxLayout(self.lblRegistroSigno)
+        self.horizontalLayout_44.setObjectName(u"horizontalLayout_44")
+        self.horizontalSpacer_46 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_44.addItem(self.horizontalSpacer_46)
+
+        self.lblIconoRegistroSigno = QPushButton(self.lblRegistroSigno)
+        self.lblIconoRegistroSigno.setObjectName(u"lblIconoRegistroSigno")
+        self.lblIconoRegistroSigno.setMinimumSize(QSize(30, 30))
+        self.lblIconoRegistroSigno.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"	border: none;\n"
+"}")
+        self.lblIconoRegistroSigno.setIcon(icon19)
+        self.lblIconoRegistroSigno.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_44.addWidget(self.lblIconoRegistroSigno)
+
+        self.lblMsjRegistroSigno = QLabel(self.lblRegistroSigno)
+        self.lblMsjRegistroSigno.setObjectName(u"lblMsjRegistroSigno")
+        self.lblMsjRegistroSigno.setFont(font7)
+        self.lblMsjRegistroSigno.setStyleSheet(u"QLabel{\n"
+"	color: #fff;\n"
+"}")
+
+        self.horizontalLayout_44.addWidget(self.lblMsjRegistroSigno)
+
+        self.horizontalSpacer_47 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_44.addItem(self.horizontalSpacer_47)
+
+
+        self.horizontalLayout_45.addWidget(self.lblRegistroSigno)
+
+
+        self.verticalLayout_53.addWidget(self.frame_79, 0, Qt.AlignTop)
+
+        self.frame_80 = QFrame(self.pagAgregarSigno)
+        self.frame_80.setObjectName(u"frame_80")
+        sizePolicy.setHeightForWidth(self.frame_80.sizePolicy().hasHeightForWidth())
+        self.frame_80.setSizePolicy(sizePolicy)
+        self.frame_80.setFrameShape(QFrame.StyledPanel)
+        self.frame_80.setFrameShadow(QFrame.Raised)
+        self.gridLayout_4 = QGridLayout(self.frame_80)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.gridLayout_4.setContentsMargins(-1, 30, -1, -1)
+        self.horizontalSpacer_45 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_4.addItem(self.horizontalSpacer_45, 0, 0, 1, 1)
+
+        self.frame_81 = QFrame(self.frame_80)
+        self.frame_81.setObjectName(u"frame_81")
+        sizePolicy1.setHeightForWidth(self.frame_81.sizePolicy().hasHeightForWidth())
+        self.frame_81.setSizePolicy(sizePolicy1)
+        self.frame_81.setMinimumSize(QSize(0, 0))
+        self.frame_81.setSizeIncrement(QSize(0, 0))
+        self.frame_81.setStyleSheet(u"QFrame{\n"
+"	border: 2px solid #737373;\n"
+"	border-radius: 8px;\n"
+"}")
+        self.frame_81.setFrameShape(QFrame.StyledPanel)
+        self.frame_81.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_54 = QVBoxLayout(self.frame_81)
+        self.verticalLayout_54.setSpacing(14)
+        self.verticalLayout_54.setObjectName(u"verticalLayout_54")
+        self.frame_82 = QFrame(self.frame_81)
+        self.frame_82.setObjectName(u"frame_82")
+        self.frame_82.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_82.setFrameShape(QFrame.StyledPanel)
+        self.frame_82.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_55 = QVBoxLayout(self.frame_82)
+        self.verticalLayout_55.setObjectName(u"verticalLayout_55")
+        self.label_39 = QLabel(self.frame_82)
+        self.label_39.setObjectName(u"label_39")
+        self.label_39.setFont(font1)
+        self.label_39.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_55.addWidget(self.label_39, 0, Qt.AlignTop)
+
+        self.inpRegistroSigno = QLineEdit(self.frame_82)
+        self.inpRegistroSigno.setObjectName(u"inpRegistroSigno")
+        self.inpRegistroSigno.setMinimumSize(QSize(0, 30))
+        self.inpRegistroSigno.setFont(font4)
+        self.inpRegistroSigno.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_55.addWidget(self.inpRegistroSigno)
+
+
+        self.verticalLayout_54.addWidget(self.frame_82, 0, Qt.AlignTop)
+
+        self.btnRegistroSignoSubmit = QPushButton(self.frame_81)
+        self.btnRegistroSignoSubmit.setObjectName(u"btnRegistroSignoSubmit")
+        self.btnRegistroSignoSubmit.setFont(font1)
+        self.btnRegistroSignoSubmit.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegistroSignoSubmit.setStyleSheet(u"QPushButton{\n"
+"	background-color: #3b82f6;\n"
+"	padding: 12px;\n"
+"	border-radius: 8px;\n"
+"	color: #fff;\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: #2563eb;\n"
+"}")
+
+        self.verticalLayout_54.addWidget(self.btnRegistroSignoSubmit)
+
+
+        self.gridLayout_4.addWidget(self.frame_81, 0, 1, 1, 1)
+
+        self.horizontalSpacer_44 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_4.addItem(self.horizontalSpacer_44, 0, 2, 1, 1)
+
+        self.verticalSpacer_10 = QSpacerItem(20, 132, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_4.addItem(self.verticalSpacer_10, 1, 1, 1, 1)
+
+
+        self.verticalLayout_53.addWidget(self.frame_80)
+
+        self.stackedWidget.addWidget(self.pagAgregarSigno)
+        self.pagEditarSigno = QWidget()
+        self.pagEditarSigno.setObjectName(u"pagEditarSigno")
+        self.verticalLayout_68 = QVBoxLayout(self.pagEditarSigno)
+        self.verticalLayout_68.setSpacing(0)
+        self.verticalLayout_68.setObjectName(u"verticalLayout_68")
+        self.verticalLayout_68.setContentsMargins(0, 0, 0, 0)
+        self.frame_106 = QFrame(self.pagEditarSigno)
+        self.frame_106.setObjectName(u"frame_106")
+        self.frame_106.setMinimumSize(QSize(0, 120))
+        self.frame_106.setFrameShape(QFrame.StyledPanel)
+        self.frame_106.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_57 = QHBoxLayout(self.frame_106)
+        self.horizontalLayout_57.setSpacing(12)
+        self.horizontalLayout_57.setObjectName(u"horizontalLayout_57")
+        self.horizontalLayout_57.setContentsMargins(20, 20, 20, 20)
+        self.btnRegresarAgSignos = QPushButton(self.frame_106)
+        self.btnRegresarAgSignos.setObjectName(u"btnRegresarAgSignos")
+        self.btnRegresarAgSignos.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegresarAgSignos.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        self.btnRegresarAgSignos.setIcon(icon18)
+        self.btnRegresarAgSignos.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_57.addWidget(self.btnRegresarAgSignos)
+
+        self.lblRegresarAgSignos = QLabel(self.frame_106)
+        self.lblRegresarAgSignos.setObjectName(u"lblRegresarAgSignos")
+        sizePolicy.setHeightForWidth(self.lblRegresarAgSignos.sizePolicy().hasHeightForWidth())
+        self.lblRegresarAgSignos.setSizePolicy(sizePolicy)
+        self.lblRegresarAgSignos.setFont(font6)
+        self.lblRegresarAgSignos.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lblRegresarAgSignos.setStyleSheet(u"QLabel{\n"
+"	color: #3E3E3E;\n"
+"}")
+
+        self.horizontalLayout_57.addWidget(self.lblRegresarAgSignos)
+
+        self.label_12 = QLabel(self.frame_106)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setFont(font8)
+        self.label_12.setStyleSheet(u"QLabel{\n"
+"	margin-left: 20px;\n"
+"}")
+
+        self.horizontalLayout_57.addWidget(self.label_12)
+
+        self.lblEditarSignoActual = QLabel(self.frame_106)
+        self.lblEditarSignoActual.setObjectName(u"lblEditarSignoActual")
+        self.lblEditarSignoActual.setFont(font8)
+
+        self.horizontalLayout_57.addWidget(self.lblEditarSignoActual)
+
+        self.horizontalSpacer_61 = QSpacerItem(297, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_57.addItem(self.horizontalSpacer_61)
+
+
+        self.verticalLayout_68.addWidget(self.frame_106, 0, Qt.AlignTop)
+
+        self.frame_107 = QFrame(self.pagEditarSigno)
+        self.frame_107.setObjectName(u"frame_107")
+        self.frame_107.setMinimumSize(QSize(0, 70))
+        self.frame_107.setFrameShape(QFrame.StyledPanel)
+        self.frame_107.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_59 = QHBoxLayout(self.frame_107)
+        self.horizontalLayout_59.setObjectName(u"horizontalLayout_59")
+        self.horizontalLayout_59.setContentsMargins(40, -1, 40, -1)
+        self.lblEditarSigno = QFrame(self.frame_107)
+        self.lblEditarSigno.setObjectName(u"lblEditarSigno")
+        self.lblEditarSigno.setStyleSheet(u"QFrame{\n"
+"	background-color: #22c55e;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.lblEditarSigno.setFrameShape(QFrame.StyledPanel)
+        self.lblEditarSigno.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_58 = QHBoxLayout(self.lblEditarSigno)
+        self.horizontalLayout_58.setObjectName(u"horizontalLayout_58")
+        self.horizontalSpacer_62 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_58.addItem(self.horizontalSpacer_62)
+
+        self.lblIconoEditarSigno = QPushButton(self.lblEditarSigno)
+        self.lblIconoEditarSigno.setObjectName(u"lblIconoEditarSigno")
+        self.lblIconoEditarSigno.setMinimumSize(QSize(30, 30))
+        self.lblIconoEditarSigno.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"	border: none;\n"
+"}")
+        self.lblIconoEditarSigno.setIcon(icon19)
+        self.lblIconoEditarSigno.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_58.addWidget(self.lblIconoEditarSigno)
+
+        self.lblMsjEditarSigno = QLabel(self.lblEditarSigno)
+        self.lblMsjEditarSigno.setObjectName(u"lblMsjEditarSigno")
+        self.lblMsjEditarSigno.setFont(font7)
+        self.lblMsjEditarSigno.setStyleSheet(u"QLabel{\n"
+"	color: #fff;\n"
+"}")
+
+        self.horizontalLayout_58.addWidget(self.lblMsjEditarSigno)
+
+        self.horizontalSpacer_63 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_58.addItem(self.horizontalSpacer_63)
+
+
+        self.horizontalLayout_59.addWidget(self.lblEditarSigno)
+
+
+        self.verticalLayout_68.addWidget(self.frame_107, 0, Qt.AlignTop)
+
+        self.frame_108 = QFrame(self.pagEditarSigno)
+        self.frame_108.setObjectName(u"frame_108")
+        sizePolicy.setHeightForWidth(self.frame_108.sizePolicy().hasHeightForWidth())
+        self.frame_108.setSizePolicy(sizePolicy)
+        self.frame_108.setMinimumSize(QSize(0, 0))
+        self.frame_108.setFrameShape(QFrame.StyledPanel)
+        self.frame_108.setFrameShadow(QFrame.Raised)
+        self.gridLayout_23 = QGridLayout(self.frame_108)
+        self.gridLayout_23.setObjectName(u"gridLayout_23")
+        self.gridLayout_23.setContentsMargins(-1, 30, -1, -1)
+        self.horizontalSpacer_67 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_23.addItem(self.horizontalSpacer_67, 0, 0, 1, 1)
+
+        self.frame_109 = QFrame(self.frame_108)
+        self.frame_109.setObjectName(u"frame_109")
+        sizePolicy1.setHeightForWidth(self.frame_109.sizePolicy().hasHeightForWidth())
+        self.frame_109.setSizePolicy(sizePolicy1)
+        self.frame_109.setMinimumSize(QSize(0, 0))
+        self.frame_109.setSizeIncrement(QSize(0, 0))
+        self.frame_109.setStyleSheet(u"QFrame{\n"
+"	border: 2px solid #737373;\n"
+"	border-radius: 8px;\n"
+"}")
+        self.frame_109.setFrameShape(QFrame.StyledPanel)
+        self.frame_109.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_69 = QVBoxLayout(self.frame_109)
+        self.verticalLayout_69.setSpacing(14)
+        self.verticalLayout_69.setObjectName(u"verticalLayout_69")
+        self.frame_110 = QFrame(self.frame_109)
+        self.frame_110.setObjectName(u"frame_110")
+        self.frame_110.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_110.setFrameShape(QFrame.StyledPanel)
+        self.frame_110.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_70 = QVBoxLayout(self.frame_110)
+        self.verticalLayout_70.setObjectName(u"verticalLayout_70")
+        self.label_46 = QLabel(self.frame_110)
+        self.label_46.setObjectName(u"label_46")
+        self.label_46.setFont(font1)
+        self.label_46.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_70.addWidget(self.label_46, 0, Qt.AlignTop)
+
+        self.inpEditarSigno = QLineEdit(self.frame_110)
+        self.inpEditarSigno.setObjectName(u"inpEditarSigno")
+        self.inpEditarSigno.setMinimumSize(QSize(0, 30))
+        self.inpEditarSigno.setFont(font4)
+        self.inpEditarSigno.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_70.addWidget(self.inpEditarSigno)
+
+
+        self.verticalLayout_69.addWidget(self.frame_110, 0, Qt.AlignTop)
+
+        self.btnEditarSignoSubmit = QPushButton(self.frame_109)
+        self.btnEditarSignoSubmit.setObjectName(u"btnEditarSignoSubmit")
+        self.btnEditarSignoSubmit.setFont(font1)
+        self.btnEditarSignoSubmit.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnEditarSignoSubmit.setStyleSheet(u"QPushButton{\n"
+"	background-color: #3b82f6;\n"
+"	padding: 12px;\n"
+"	border-radius: 8px;\n"
+"	color: #fff;\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: #2563eb;\n"
+"}")
+
+        self.verticalLayout_69.addWidget(self.btnEditarSignoSubmit)
+
+
+        self.gridLayout_23.addWidget(self.frame_109, 0, 1, 1, 1)
+
+        self.horizontalSpacer_66 = QSpacerItem(240, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_23.addItem(self.horizontalSpacer_66, 0, 2, 1, 1)
+
+        self.verticalSpacer_14 = QSpacerItem(20, 306, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_23.addItem(self.verticalSpacer_14, 1, 1, 1, 1)
+
+
+        self.verticalLayout_68.addWidget(self.frame_108)
+
+        self.stackedWidget.addWidget(self.pagEditarSigno)
 
         self.gridLayout_10.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
@@ -2651,13 +4643,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.frame_2)
 
 
-        self.verticalLayout_2.addWidget(self.frame_9)
+        self.horizontalLayout_36.addWidget(self.frame_9)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(19)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2676,6 +4668,12 @@ class Ui_MainWindow(object):
         self.lblCitas.setText(QCoreApplication.translate("MainWindow", u"Citas", None))
         self.pushButton_9.setText("")
         self.lblAnalisis.setText(QCoreApplication.translate("MainWindow", u"Analisis", None))
+        self.pushButton.setText("")
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Enfermedades", None))
+        self.pushButton_2.setText("")
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Signos", None))
+        self.pushButton_3.setText("")
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None))
         self.pushButton_11.setText("")
         self.lblSalir.setText(QCoreApplication.translate("MainWindow", u"Salir", None))
         self.lblBienvenenida.setText(QCoreApplication.translate("MainWindow", u"Inicio", None))
@@ -2737,6 +4735,64 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
         ___qtablewidgetitem16 = self.tblCitas.horizontalHeaderItem(5)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        self.pushButton_18.setText("")
+        self.lblBienvenenida_5.setText(QCoreApplication.translate("MainWindow", u"Analisis", None))
+        self.btnAgregarAnalisis.setText(QCoreApplication.translate("MainWindow", u"      Agregar Analisis", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
+        self.inpBusquedaCitas_2.setText("")
+        ___qtablewidgetitem17 = self.tblAnalisis.horizontalHeaderItem(0)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem18 = self.tblAnalisis.horizontalHeaderItem(1)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"Paciente", None));
+        ___qtablewidgetitem19 = self.tblAnalisis.horizontalHeaderItem(2)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
+        ___qtablewidgetitem20 = self.tblAnalisis.horizontalHeaderItem(3)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem21 = self.tblAnalisis.horizontalHeaderItem(4)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        self.pushButton_21.setText("")
+        self.lblBienvenenida_8.setText(QCoreApplication.translate("MainWindow", u"Enfermedades", None))
+        self.btnAgregarEnfermedad.setText(QCoreApplication.translate("MainWindow", u"      Agregar Enfermedad", None))
+        self.label_37.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
+        self.inpBusquedaCitas_5.setText("")
+        ___qtablewidgetitem22 = self.tblEnfermedades.horizontalHeaderItem(0)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem23 = self.tblEnfermedades.horizontalHeaderItem(1)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Enfermedad", None));
+        ___qtablewidgetitem24 = self.tblEnfermedades.horizontalHeaderItem(2)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
+        ___qtablewidgetitem25 = self.tblEnfermedades.horizontalHeaderItem(3)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None));
+        ___qtablewidgetitem26 = self.tblEnfermedades.horizontalHeaderItem(4)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem27 = self.tblEnfermedades.horizontalHeaderItem(5)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        self.pushButton_19.setText("")
+        self.lblBienvenenida_6.setText(QCoreApplication.translate("MainWindow", u"Signos", None))
+        self.btnAgregarSigno.setText(QCoreApplication.translate("MainWindow", u"      Agregar Signos", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
+        self.inpBusquedaCitas_3.setText("")
+        ___qtablewidgetitem28 = self.tblSignos.horizontalHeaderItem(0)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem29 = self.tblSignos.horizontalHeaderItem(1)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
+        ___qtablewidgetitem30 = self.tblSignos.horizontalHeaderItem(2)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem31 = self.tblSignos.horizontalHeaderItem(3)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        self.pushButton_20.setText("")
+        self.lblBienvenenida_7.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None))
+        self.btnAgregarSintoma.setText(QCoreApplication.translate("MainWindow", u"      Agregar Sintoma", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
+        self.inpBusquedaCitas_4.setText("")
+        ___qtablewidgetitem32 = self.tblSintomas.horizontalHeaderItem(0)
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem33 = self.tblSintomas.horizontalHeaderItem(1)
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"Sintoma", None));
+        ___qtablewidgetitem34 = self.tblSintomas.horizontalHeaderItem(2)
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem35 = self.tblSintomas.horizontalHeaderItem(3)
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
         self.btnRegresarAUsuarios.setText("")
         self.lblRegresarAgUsuarios.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
         self.lblIconoRegistroUsuario.setText("")
@@ -2795,5 +4851,57 @@ class Ui_MainWindow(object):
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"Medico", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Fecha", None))
         self.btnEditarCitaSubmit.setText(QCoreApplication.translate("MainWindow", u"Cambiar Cita", None))
+        self.btnRegresarAEnfermedades.setText("")
+        self.lblRegresarAEnfermedades.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
+        self.lblIconoRegistroEnfermedad.setText("")
+        self.lblMsjRegistroEnfermedad.setText(QCoreApplication.translate("MainWindow", u"Registro realizado exitosamente", None))
+        self.label_38.setText(QCoreApplication.translate("MainWindow", u"Enfermedad", None))
+        self.inpRegistroEnfermedad.setText("")
+        self.label_40.setText(QCoreApplication.translate("MainWindow", u"Signos", None))
+        self.label_41.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None))
+        self.btnRegistroEnfermedadSubmit.setText(QCoreApplication.translate("MainWindow", u"Registrar Enfermedad", None))
+        self.btnRegresarAgEnfermedades.setText("")
+        self.lblRegresarAgEnfermedades.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Editando Enfermedad:", None))
+        self.lblEditarEnfermedadActual.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.lblIconoEditarEnfermedad.setText("")
+        self.lblMsjEditarEnfermedad.setText(QCoreApplication.translate("MainWindow", u"Registro realizado exitosamente", None))
+        self.label_42.setText(QCoreApplication.translate("MainWindow", u"Enfermedad", None))
+        self.inpEditarEnfermedad.setText("")
+        self.label_43.setText(QCoreApplication.translate("MainWindow", u"Signos", None))
+        self.label_44.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None))
+        self.btnEditarEnfermedadSubmit.setText(QCoreApplication.translate("MainWindow", u"Guardar cambios", None))
+        self.btnRegresarASintomas.setText("")
+        self.lblRegresarASintomas.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
+        self.lblIconoRegistroSintoma.setText("")
+        self.lblMsjRegistroSintoma.setText(QCoreApplication.translate("MainWindow", u"Registro realizado exitosamente", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"Sintoma", None))
+        self.inpRegistroSintoma.setText("")
+        self.btnRegistroSintomaSubmit.setText(QCoreApplication.translate("MainWindow", u"Registrar Sintoma", None))
+        self.btnRegresarAgSintomas.setText("")
+        self.lblRegresarAgSintomas.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Editando Sintoma:", None))
+        self.lblEditarSintomaActual.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.lblIconoEditarSintoma.setText("")
+        self.lblMsjEditarSintoma.setText(QCoreApplication.translate("MainWindow", u"Registro realizado exitosamente", None))
+        self.label_45.setText(QCoreApplication.translate("MainWindow", u"Sintoma", None))
+        self.inpEditarSintoma.setText("")
+        self.btnEditarSintomaSubmit.setText(QCoreApplication.translate("MainWindow", u"Guardar cambios", None))
+        self.btnRegresarASignos.setText("")
+        self.lblRegresarASignos.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
+        self.lblIconoRegistroSigno.setText("")
+        self.lblMsjRegistroSigno.setText(QCoreApplication.translate("MainWindow", u"Registro realizado exitosamente", None))
+        self.label_39.setText(QCoreApplication.translate("MainWindow", u"Signo", None))
+        self.inpRegistroSigno.setText("")
+        self.btnRegistroSignoSubmit.setText(QCoreApplication.translate("MainWindow", u"Registrar Signo", None))
+        self.btnRegresarAgSignos.setText("")
+        self.lblRegresarAgSignos.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Editando Signo:", None))
+        self.lblEditarSignoActual.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.lblIconoEditarSigno.setText("")
+        self.lblMsjEditarSigno.setText(QCoreApplication.translate("MainWindow", u"Registro realizado exitosamente", None))
+        self.label_46.setText(QCoreApplication.translate("MainWindow", u"Signo", None))
+        self.inpEditarSigno.setText("")
+        self.btnEditarSignoSubmit.setText(QCoreApplication.translate("MainWindow", u"Guardar cambios", None))
     # retranslateUi
 

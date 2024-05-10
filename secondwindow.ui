@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>930</width>
-    <height>702</height>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -238,7 +238,7 @@
                 <enum>QFrame::Raised</enum>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_4">
-                <item>
+                <item alignment="Qt::AlignLeft">
                  <widget class="QFrame" name="btnUsuarios">
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -255,7 +255,7 @@
                    <enum>QFrame::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_5">
-                   <item row="0" column="0" alignment="Qt::AlignLeft">
+                   <item row="0" column="0">
                     <widget class="QPushButton" name="pushButton_6">
                      <property name="styleSheet">
                       <string notr="true">QPushButton{
@@ -286,6 +286,9 @@
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel{
@@ -428,7 +431,7 @@
                  </widget>
                 </item>
                 <item alignment="Qt::AlignLeft">
-                 <widget class="QFrame" name="btnAnalasis">
+                 <widget class="QFrame" name="btnAnalisis">
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -491,7 +494,12 @@
                  </widget>
                 </item>
                 <item alignment="Qt::AlignLeft">
-                 <widget class="QFrame" name="frame_85">
+                 <widget class="QFrame" name="btnEnfermedades">
+                  <property name="styleSheet">
+                   <string notr="true">QFrame:hover{
+	background-color: #475569;
+}</string>
+                  </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -546,9 +554,14 @@
                  </widget>
                 </item>
                 <item alignment="Qt::AlignLeft">
-                 <widget class="QFrame" name="frame_86">
+                 <widget class="QFrame" name="btnSignos">
                   <property name="layoutDirection">
                    <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame:hover{
+	background-color: #475569;
+}</string>
                   </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -607,9 +620,14 @@
                  </widget>
                 </item>
                 <item alignment="Qt::AlignLeft">
-                 <widget class="QFrame" name="frame_87">
+                 <widget class="QFrame" name="btnSintomas">
                   <property name="layoutDirection">
-                   <enum>Qt::RightToLeft</enum>
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame:hover{
+	background-color: #475569;
+}</string>
                   </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -619,27 +637,6 @@
                   </property>
                   <layout class="QGridLayout" name="gridLayout_19">
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_5">
-                     <property name="font">
-                      <font>
-                       <family>Arial</family>
-                       <pointsize>12</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QLabel{
-	background-color: transparent;
-	color: #fff;
-}</string>
-                     </property>
-                     <property name="text">
-                      <string>Sintomas</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
                     <widget class="QPushButton" name="pushButton_3">
                      <property name="styleSheet">
                       <string notr="true">QPushButton{
@@ -658,6 +655,27 @@
                        <width>30</width>
                        <height>30</height>
                       </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_5">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+	background-color: transparent;
+	color: #fff;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Sintomas</string>
                      </property>
                     </widget>
                    </item>
@@ -792,7 +810,7 @@
              <number>0</number>
             </property>
             <property name="currentIndex">
-             <number>17</number>
+             <number>19</number>
             </property>
             <widget class="QWidget" name="pagInicio">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -2341,7 +2359,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="btnAgregarCita_2">
+                  <widget class="QPushButton" name="btnAgregarAnalisis">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -2497,7 +2515,7 @@ QPushButton::hover{
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_19">
                  <item>
-                  <widget class="QTableWidget" name="tblCitas_2">
+                  <widget class="QTableWidget" name="tblAnalisis">
                    <property name="font">
                     <font>
                      <family>Arial</family>
@@ -2569,7 +2587,7 @@ QPushButton::hover{
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page">
+            <widget class="QWidget" name="pagEnfermedades">
              <layout class="QVBoxLayout" name="verticalLayout_51">
               <property name="spacing">
                <number>0</number>
@@ -2655,7 +2673,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="btnAgregarCita_5">
+                  <widget class="QPushButton" name="btnAgregarEnfermedad">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -2805,7 +2823,7 @@ QPushButton::hover{
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_47">
                  <item>
-                  <widget class="QTableWidget" name="tblCitas_5">
+                  <widget class="QTableWidget" name="tblEnfermedades">
                    <property name="font">
                     <font>
                      <family>Arial</family>
@@ -2839,7 +2857,7 @@ QPushButton::hover{
                    </column>
                    <column>
                     <property name="text">
-                     <string>Nueva columna</string>
+                     <string>Signo</string>
                     </property>
                    </column>
                    <column>
@@ -2876,7 +2894,7 @@ QPushButton::hover{
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="pagSigno">
+            <widget class="QWidget" name="pagSignos">
              <layout class="QVBoxLayout" name="verticalLayout_20">
               <property name="spacing">
                <number>0</number>
@@ -2962,7 +2980,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="btnAgregarCita_3">
+                  <widget class="QPushButton" name="btnAgregarSigno">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -3112,7 +3130,7 @@ QPushButton::hover{
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_2">
                  <item>
-                  <widget class="QTableWidget" name="tblCitas_3">
+                  <widget class="QTableWidget" name="tblSignos">
                    <property name="font">
                     <font>
                      <family>Arial</family>
@@ -3259,7 +3277,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="btnAgregarCita_4">
+                  <widget class="QPushButton" name="btnAgregarSintoma">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -3409,7 +3427,7 @@ QPushButton::hover{
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_38">
                  <item>
-                  <widget class="QTableWidget" name="tblCitas_4">
+                  <widget class="QTableWidget" name="tblSintomas">
                    <property name="font">
                     <font>
                      <family>Arial</family>
@@ -6920,7 +6938,7 @@ QPushButton::hover{
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="btnRegresarACitas_4">
+                  <widget class="QPushButton" name="btnRegresarAEnfermedades">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
@@ -6945,7 +6963,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="lblRegresarACitas_4">
+                  <widget class="QLabel" name="lblRegresarAEnfermedades">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -7037,7 +7055,7 @@ QPushButton::hover{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="lblIconoRegistroCita_3">
+                     <widget class="QPushButton" name="lblIconoRegistroEnfermedad">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -7066,7 +7084,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="lblMsjRegistroCita_3">
+                     <widget class="QLabel" name="lblMsjRegistroEnfermedad">
                       <property name="font">
                        <font>
                         <family>Arial</family>
@@ -7272,7 +7290,7 @@ QPushButton::hover{
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLineEdit" name="inpRegistroEnfSign">
+                        <widget class="QLineEdit" name="inpRegistroESigno">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -7335,7 +7353,7 @@ QPushButton::hover{
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLineEdit" name="inpRegistroEnfSint">
+                        <widget class="QLineEdit" name="inpRegistroESintoma">
                          <property name="font">
                           <font>
                            <family>Arial</family>
@@ -7358,7 +7376,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="btnRegistroEnfermedad">
+                     <widget class="QPushButton" name="btnRegistroEnfermedadSubmit">
                       <property name="font">
                        <font>
                         <family>Arial</family>
@@ -7465,7 +7483,7 @@ QPushButton::hover{
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="btnRegresarAgCitas_2">
+                  <widget class="QPushButton" name="btnRegresarAgEnfermedades">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
@@ -7490,7 +7508,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="lblRegresarAgCitas_2">
+                  <widget class="QLabel" name="lblRegresarAgEnfermedades">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -7585,7 +7603,7 @@ QPushButton::hover{
                   <number>40</number>
                  </property>
                  <item>
-                  <widget class="QFrame" name="lblEditarCita_2">
+                  <widget class="QFrame" name="lblEditarEnfermedad">
                    <property name="styleSheet">
                     <string notr="true">QFrame{
 	background-color: #22c55e;
@@ -7613,7 +7631,7 @@ QPushButton::hover{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="lblIconoEditarCita_2">
+                     <widget class="QPushButton" name="lblIconoEditarEnfermedad">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -7642,7 +7660,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="lblMsjEditarCita_2">
+                     <widget class="QLabel" name="lblMsjEditarEnfermedad">
                       <property name="font">
                        <font>
                         <family>Arial</family>
@@ -7848,7 +7866,7 @@ QPushButton::hover{
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLineEdit" name="inpEditarEnfSign">
+                        <widget class="QLineEdit" name="inpEditarESigno">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -7911,7 +7929,7 @@ QPushButton::hover{
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLineEdit" name="inpEditarEnfSint">
+                        <widget class="QLineEdit" name="inpEditarESintoma">
                          <property name="font">
                           <font>
                            <family>Arial</family>
@@ -8044,7 +8062,7 @@ QPushButton::hover{
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="btnRegresarACitas_2">
+                  <widget class="QPushButton" name="btnRegresarASintomas">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
@@ -8069,7 +8087,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="lblRegresarACitas_2">
+                  <widget class="QLabel" name="lblRegresarASintomas">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -8161,7 +8179,7 @@ QPushButton::hover{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="lblIconoRegistroCita_2">
+                     <widget class="QPushButton" name="lblIconoRegistroSintoma">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -8190,7 +8208,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="lblMsjRegistroCita_2">
+                     <widget class="QLabel" name="lblMsjRegistroSintoma">
                       <property name="font">
                        <font>
                         <family>Arial</family>
@@ -8424,7 +8442,7 @@ QPushButton::hover{
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="pagEditarEnfermedad_2">
+            <widget class="QWidget" name="pagEditarSintoma">
              <layout class="QVBoxLayout" name="verticalLayout_65">
               <property name="spacing">
                <number>0</number>
@@ -8469,7 +8487,7 @@ QPushButton::hover{
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="btnRegresarAgCitas_3">
+                  <widget class="QPushButton" name="btnRegresarAgSintomas">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
@@ -8494,7 +8512,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="lblRegresarAgCitas_3">
+                  <widget class="QLabel" name="lblRegresarAgSintomas">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -8617,7 +8635,7 @@ QPushButton::hover{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="lblIconoRegistroCita_5">
+                     <widget class="QPushButton" name="lblIconoEditarSintoma">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -8646,7 +8664,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="lblMsjRegistroCita_5">
+                     <widget class="QLabel" name="lblMsjEditarSintoma">
                       <property name="font">
                        <font>
                         <family>Arial</family>
@@ -8928,7 +8946,7 @@ QPushButton::hover{
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="btnRegresarACitas_3">
+                  <widget class="QPushButton" name="btnRegresarASignos">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
@@ -8953,7 +8971,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="lblRegresarACitas_3">
+                  <widget class="QLabel" name="lblRegresarASignos">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -9045,7 +9063,7 @@ QPushButton::hover{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="lblIconoRegistroCita_4">
+                     <widget class="QPushButton" name="lblIconoRegistroSigno">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -9074,7 +9092,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="lblMsjRegistroCita_4">
+                     <widget class="QLabel" name="lblMsjRegistroSigno">
                       <property name="font">
                        <font>
                         <family>Arial</family>
@@ -9246,7 +9264,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="btnRegistroSintomaSubmit_2">
+                     <widget class="QPushButton" name="btnRegistroSignoSubmit">
                       <property name="font">
                        <font>
                         <family>Arial</family>
@@ -9308,7 +9326,7 @@ QPushButton::hover{
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="pageEditarSignos">
+            <widget class="QWidget" name="pagEditarSigno">
              <layout class="QVBoxLayout" name="verticalLayout_68">
               <property name="spacing">
                <number>0</number>
@@ -9356,7 +9374,7 @@ QPushButton::hover{
                   <number>20</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="btnRegresarAgCitas_4">
+                  <widget class="QPushButton" name="btnRegresarAgSignos">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
@@ -9381,7 +9399,7 @@ QPushButton::hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="lblRegresarAgCitas_4">
+                  <widget class="QLabel" name="lblRegresarAgSignos">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -9504,7 +9522,7 @@ QPushButton::hover{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="lblIconoRegistroCita_6">
+                     <widget class="QPushButton" name="lblIconoEditarSigno">
                       <property name="minimumSize">
                        <size>
                         <width>30</width>
@@ -9533,7 +9551,7 @@ QPushButton::hover{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="lblMsjRegistroCita_6">
+                     <widget class="QLabel" name="lblMsjEditarSigno">
                       <property name="font">
                        <font>
                         <family>Arial</family>
