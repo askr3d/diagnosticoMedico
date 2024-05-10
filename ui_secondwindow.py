@@ -1219,8 +1219,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_19 = QVBoxLayout(self.frame_7)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.tblAnalisis = QTableWidget(self.frame_7)
-        if (self.tblAnalisis.columnCount() < 5):
-            self.tblAnalisis.setColumnCount(5)
+        if (self.tblAnalisis.columnCount() < 7):
+            self.tblAnalisis.setColumnCount(7)
         __qtablewidgetitem17 = QTableWidgetItem()
         __qtablewidgetitem17.setFont(font5);
         self.tblAnalisis.setHorizontalHeaderItem(0, __qtablewidgetitem17)
@@ -1230,11 +1230,15 @@ class Ui_MainWindow(object):
         __qtablewidgetitem19 = QTableWidgetItem()
         self.tblAnalisis.setHorizontalHeaderItem(2, __qtablewidgetitem19)
         __qtablewidgetitem20 = QTableWidgetItem()
-        __qtablewidgetitem20.setFont(font5);
         self.tblAnalisis.setHorizontalHeaderItem(3, __qtablewidgetitem20)
         __qtablewidgetitem21 = QTableWidgetItem()
-        __qtablewidgetitem21.setFont(font5);
         self.tblAnalisis.setHorizontalHeaderItem(4, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        __qtablewidgetitem22.setFont(font5);
+        self.tblAnalisis.setHorizontalHeaderItem(5, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        __qtablewidgetitem23.setFont(font5);
+        self.tblAnalisis.setHorizontalHeaderItem(6, __qtablewidgetitem23)
         self.tblAnalisis.setObjectName(u"tblAnalisis")
         self.tblAnalisis.setFont(font4)
         self.tblAnalisis.setStyleSheet(u"QHeaderView::section{\n"
@@ -1358,21 +1362,21 @@ class Ui_MainWindow(object):
         self.tblEnfermedades = QTableWidget(self.frame_83)
         if (self.tblEnfermedades.columnCount() < 6):
             self.tblEnfermedades.setColumnCount(6)
-        __qtablewidgetitem22 = QTableWidgetItem()
-        __qtablewidgetitem22.setFont(font5);
-        self.tblEnfermedades.setHorizontalHeaderItem(0, __qtablewidgetitem22)
-        __qtablewidgetitem23 = QTableWidgetItem()
-        self.tblEnfermedades.setHorizontalHeaderItem(1, __qtablewidgetitem23)
         __qtablewidgetitem24 = QTableWidgetItem()
-        self.tblEnfermedades.setHorizontalHeaderItem(2, __qtablewidgetitem24)
+        __qtablewidgetitem24.setFont(font5);
+        self.tblEnfermedades.setHorizontalHeaderItem(0, __qtablewidgetitem24)
         __qtablewidgetitem25 = QTableWidgetItem()
-        self.tblEnfermedades.setHorizontalHeaderItem(3, __qtablewidgetitem25)
+        self.tblEnfermedades.setHorizontalHeaderItem(1, __qtablewidgetitem25)
         __qtablewidgetitem26 = QTableWidgetItem()
-        __qtablewidgetitem26.setFont(font5);
-        self.tblEnfermedades.setHorizontalHeaderItem(4, __qtablewidgetitem26)
+        self.tblEnfermedades.setHorizontalHeaderItem(2, __qtablewidgetitem26)
         __qtablewidgetitem27 = QTableWidgetItem()
-        __qtablewidgetitem27.setFont(font5);
-        self.tblEnfermedades.setHorizontalHeaderItem(5, __qtablewidgetitem27)
+        self.tblEnfermedades.setHorizontalHeaderItem(3, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        __qtablewidgetitem28.setFont(font5);
+        self.tblEnfermedades.setHorizontalHeaderItem(4, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        __qtablewidgetitem29.setFont(font5);
+        self.tblEnfermedades.setHorizontalHeaderItem(5, __qtablewidgetitem29)
         self.tblEnfermedades.setObjectName(u"tblEnfermedades")
         self.tblEnfermedades.setFont(font4)
         self.tblEnfermedades.setStyleSheet(u"QHeaderView::section{\n"
@@ -1496,17 +1500,17 @@ class Ui_MainWindow(object):
         self.tblSignos = QTableWidget(self.frame_30)
         if (self.tblSignos.columnCount() < 4):
             self.tblSignos.setColumnCount(4)
-        __qtablewidgetitem28 = QTableWidgetItem()
-        __qtablewidgetitem28.setFont(font5);
-        self.tblSignos.setHorizontalHeaderItem(0, __qtablewidgetitem28)
-        __qtablewidgetitem29 = QTableWidgetItem()
-        self.tblSignos.setHorizontalHeaderItem(1, __qtablewidgetitem29)
         __qtablewidgetitem30 = QTableWidgetItem()
         __qtablewidgetitem30.setFont(font5);
-        self.tblSignos.setHorizontalHeaderItem(2, __qtablewidgetitem30)
+        self.tblSignos.setHorizontalHeaderItem(0, __qtablewidgetitem30)
         __qtablewidgetitem31 = QTableWidgetItem()
-        __qtablewidgetitem31.setFont(font5);
-        self.tblSignos.setHorizontalHeaderItem(3, __qtablewidgetitem31)
+        self.tblSignos.setHorizontalHeaderItem(1, __qtablewidgetitem31)
+        __qtablewidgetitem32 = QTableWidgetItem()
+        __qtablewidgetitem32.setFont(font5);
+        self.tblSignos.setHorizontalHeaderItem(2, __qtablewidgetitem32)
+        __qtablewidgetitem33 = QTableWidgetItem()
+        __qtablewidgetitem33.setFont(font5);
+        self.tblSignos.setHorizontalHeaderItem(3, __qtablewidgetitem33)
         self.tblSignos.setObjectName(u"tblSignos")
         self.tblSignos.setFont(font4)
         self.tblSignos.setStyleSheet(u"QHeaderView::section{\n"
@@ -1630,17 +1634,17 @@ class Ui_MainWindow(object):
         self.tblSintomas = QTableWidget(self.frame_69)
         if (self.tblSintomas.columnCount() < 4):
             self.tblSintomas.setColumnCount(4)
-        __qtablewidgetitem32 = QTableWidgetItem()
-        __qtablewidgetitem32.setFont(font5);
-        self.tblSintomas.setHorizontalHeaderItem(0, __qtablewidgetitem32)
-        __qtablewidgetitem33 = QTableWidgetItem()
-        self.tblSintomas.setHorizontalHeaderItem(1, __qtablewidgetitem33)
         __qtablewidgetitem34 = QTableWidgetItem()
         __qtablewidgetitem34.setFont(font5);
-        self.tblSintomas.setHorizontalHeaderItem(2, __qtablewidgetitem34)
+        self.tblSintomas.setHorizontalHeaderItem(0, __qtablewidgetitem34)
         __qtablewidgetitem35 = QTableWidgetItem()
-        __qtablewidgetitem35.setFont(font5);
-        self.tblSintomas.setHorizontalHeaderItem(3, __qtablewidgetitem35)
+        self.tblSintomas.setHorizontalHeaderItem(1, __qtablewidgetitem35)
+        __qtablewidgetitem36 = QTableWidgetItem()
+        __qtablewidgetitem36.setFont(font5);
+        self.tblSintomas.setHorizontalHeaderItem(2, __qtablewidgetitem36)
+        __qtablewidgetitem37 = QTableWidgetItem()
+        __qtablewidgetitem37.setFont(font5);
+        self.tblSintomas.setHorizontalHeaderItem(3, __qtablewidgetitem37)
         self.tblSintomas.setObjectName(u"tblSintomas")
         self.tblSintomas.setFont(font4)
         self.tblSintomas.setStyleSheet(u"QHeaderView::section{\n"
@@ -4636,6 +4640,254 @@ class Ui_MainWindow(object):
         self.verticalLayout_68.addWidget(self.frame_108)
 
         self.stackedWidget.addWidget(self.pagEditarSigno)
+        self.pagDiagnostico = QWidget()
+        self.pagDiagnostico.setObjectName(u"pagDiagnostico")
+        self.verticalLayout_71 = QVBoxLayout(self.pagDiagnostico)
+        self.verticalLayout_71.setSpacing(0)
+        self.verticalLayout_71.setObjectName(u"verticalLayout_71")
+        self.verticalLayout_71.setContentsMargins(0, 0, 0, 0)
+        self.frame_85 = QFrame(self.pagDiagnostico)
+        self.frame_85.setObjectName(u"frame_85")
+        self.frame_85.setMinimumSize(QSize(0, 120))
+        self.frame_85.setFrameShape(QFrame.StyledPanel)
+        self.frame_85.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_60 = QHBoxLayout(self.frame_85)
+        self.horizontalLayout_60.setSpacing(12)
+        self.horizontalLayout_60.setObjectName(u"horizontalLayout_60")
+        self.horizontalLayout_60.setContentsMargins(20, 20, 20, 20)
+        self.btnRegresarAAnalisis = QPushButton(self.frame_85)
+        self.btnRegresarAAnalisis.setObjectName(u"btnRegresarAAnalisis")
+        self.btnRegresarAAnalisis.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnRegresarAAnalisis.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"}")
+        self.btnRegresarAAnalisis.setIcon(icon18)
+        self.btnRegresarAAnalisis.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_60.addWidget(self.btnRegresarAAnalisis)
+
+        self.lblRegresarAAnalisis = QLabel(self.frame_85)
+        self.lblRegresarAAnalisis.setObjectName(u"lblRegresarAAnalisis")
+        sizePolicy.setHeightForWidth(self.lblRegresarAAnalisis.sizePolicy().hasHeightForWidth())
+        self.lblRegresarAAnalisis.setSizePolicy(sizePolicy)
+        self.lblRegresarAAnalisis.setFont(font6)
+        self.lblRegresarAAnalisis.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lblRegresarAAnalisis.setStyleSheet(u"QLabel{\n"
+"	color: #3E3E3E;\n"
+"}")
+
+        self.horizontalLayout_60.addWidget(self.lblRegresarAAnalisis)
+
+        self.horizontalSpacer_64 = QSpacerItem(594, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_60.addItem(self.horizontalSpacer_64)
+
+
+        self.verticalLayout_71.addWidget(self.frame_85, 0, Qt.AlignTop)
+
+        self.frame_86 = QFrame(self.pagDiagnostico)
+        self.frame_86.setObjectName(u"frame_86")
+        self.frame_86.setMinimumSize(QSize(0, 70))
+        self.frame_86.setFrameShape(QFrame.StyledPanel)
+        self.frame_86.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_62 = QHBoxLayout(self.frame_86)
+        self.horizontalLayout_62.setObjectName(u"horizontalLayout_62")
+        self.horizontalLayout_62.setContentsMargins(40, 9, 40, -1)
+        self.lblRegistroAnalisis = QFrame(self.frame_86)
+        self.lblRegistroAnalisis.setObjectName(u"lblRegistroAnalisis")
+        self.lblRegistroAnalisis.setStyleSheet(u"QFrame{\n"
+"	background-color: #22c55e;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.lblRegistroAnalisis.setFrameShape(QFrame.StyledPanel)
+        self.lblRegistroAnalisis.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_61 = QHBoxLayout(self.lblRegistroAnalisis)
+        self.horizontalLayout_61.setObjectName(u"horizontalLayout_61")
+        self.horizontalSpacer_69 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_61.addItem(self.horizontalSpacer_69)
+
+        self.lblIconoRegistroAnalisis = QPushButton(self.lblRegistroAnalisis)
+        self.lblIconoRegistroAnalisis.setObjectName(u"lblIconoRegistroAnalisis")
+        self.lblIconoRegistroAnalisis.setMinimumSize(QSize(30, 30))
+        self.lblIconoRegistroAnalisis.setStyleSheet(u"QPushButton{\n"
+"	background-color: transparent;\n"
+"	border: none;\n"
+"}")
+        self.lblIconoRegistroAnalisis.setIcon(icon19)
+        self.lblIconoRegistroAnalisis.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_61.addWidget(self.lblIconoRegistroAnalisis)
+
+        self.lblMsjRegistroAnalisis = QLabel(self.lblRegistroAnalisis)
+        self.lblMsjRegistroAnalisis.setObjectName(u"lblMsjRegistroAnalisis")
+        self.lblMsjRegistroAnalisis.setFont(font7)
+        self.lblMsjRegistroAnalisis.setStyleSheet(u"QLabel{\n"
+"	color: #fff;\n"
+"}")
+
+        self.horizontalLayout_61.addWidget(self.lblMsjRegistroAnalisis)
+
+        self.horizontalSpacer_70 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_61.addItem(self.horizontalSpacer_70)
+
+
+        self.horizontalLayout_62.addWidget(self.lblRegistroAnalisis)
+
+
+        self.verticalLayout_71.addWidget(self.frame_86, 0, Qt.AlignTop)
+
+        self.frame_87 = QFrame(self.pagDiagnostico)
+        self.frame_87.setObjectName(u"frame_87")
+        sizePolicy.setHeightForWidth(self.frame_87.sizePolicy().hasHeightForWidth())
+        self.frame_87.setSizePolicy(sizePolicy)
+        self.frame_87.setFrameShape(QFrame.StyledPanel)
+        self.frame_87.setFrameShadow(QFrame.Raised)
+        self.gridLayout_24 = QGridLayout(self.frame_87)
+        self.gridLayout_24.setObjectName(u"gridLayout_24")
+        self.horizontalSpacer_68 = QSpacerItem(239, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_24.addItem(self.horizontalSpacer_68, 0, 0, 1, 1)
+
+        self.frame_111 = QFrame(self.frame_87)
+        self.frame_111.setObjectName(u"frame_111")
+        sizePolicy1.setHeightForWidth(self.frame_111.sizePolicy().hasHeightForWidth())
+        self.frame_111.setSizePolicy(sizePolicy1)
+        self.frame_111.setMinimumSize(QSize(0, 0))
+        self.frame_111.setSizeIncrement(QSize(0, 0))
+        self.frame_111.setStyleSheet(u"QFrame{\n"
+"	border: 2px solid #737373;\n"
+"	border-radius: 8px;\n"
+"}")
+        self.frame_111.setFrameShape(QFrame.StyledPanel)
+        self.frame_111.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_76 = QVBoxLayout(self.frame_111)
+        self.verticalLayout_76.setSpacing(14)
+        self.verticalLayout_76.setObjectName(u"verticalLayout_76")
+        self.frame_115 = QFrame(self.frame_111)
+        self.frame_115.setObjectName(u"frame_115")
+        self.frame_115.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_115.setFrameShape(QFrame.StyledPanel)
+        self.frame_115.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_77 = QVBoxLayout(self.frame_115)
+        self.verticalLayout_77.setObjectName(u"verticalLayout_77")
+        self.label_50 = QLabel(self.frame_115)
+        self.label_50.setObjectName(u"label_50")
+        self.label_50.setFont(font)
+        self.label_50.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_77.addWidget(self.label_50)
+
+
+        self.verticalLayout_76.addWidget(self.frame_115, 0, Qt.AlignTop)
+
+        self.frame_116 = QFrame(self.frame_111)
+        self.frame_116.setObjectName(u"frame_116")
+        self.frame_116.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_116.setFrameShape(QFrame.StyledPanel)
+        self.frame_116.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_78 = QVBoxLayout(self.frame_116)
+        self.verticalLayout_78.setObjectName(u"verticalLayout_78")
+        self.label_51 = QLabel(self.frame_116)
+        self.label_51.setObjectName(u"label_51")
+        self.label_51.setFont(font1)
+        self.label_51.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_78.addWidget(self.label_51, 0, Qt.AlignTop)
+
+        self.inpAgregarAnalisisSigno = QLineEdit(self.frame_116)
+        self.inpAgregarAnalisisSigno.setObjectName(u"inpAgregarAnalisisSigno")
+        self.inpAgregarAnalisisSigno.setMinimumSize(QSize(0, 30))
+        self.inpAgregarAnalisisSigno.setFont(font4)
+        self.inpAgregarAnalisisSigno.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_78.addWidget(self.inpAgregarAnalisisSigno)
+
+
+        self.verticalLayout_76.addWidget(self.frame_116, 0, Qt.AlignTop)
+
+        self.frame_117 = QFrame(self.frame_111)
+        self.frame_117.setObjectName(u"frame_117")
+        self.frame_117.setStyleSheet(u"QFrame{\n"
+"	border: none;\n"
+"}")
+        self.frame_117.setFrameShape(QFrame.StyledPanel)
+        self.frame_117.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_79 = QVBoxLayout(self.frame_117)
+        self.verticalLayout_79.setObjectName(u"verticalLayout_79")
+        self.label_52 = QLabel(self.frame_117)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setFont(font1)
+        self.label_52.setStyleSheet(u"QLabel{\n"
+"	color: #404040;\n"
+"}")
+
+        self.verticalLayout_79.addWidget(self.label_52, 0, Qt.AlignTop)
+
+        self.inpAgregarAnalisisSintoma = QLineEdit(self.frame_117)
+        self.inpAgregarAnalisisSintoma.setObjectName(u"inpAgregarAnalisisSintoma")
+        self.inpAgregarAnalisisSintoma.setFont(font4)
+        self.inpAgregarAnalisisSintoma.setStyleSheet(u"QLineEdit{\n"
+"	padding: 4px;\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid #57534e;\n"
+"	color: #404040;\n"
+"	padding-left: 5px;\n"
+"	padding-right: 5px;\n"
+"}")
+
+        self.verticalLayout_79.addWidget(self.inpAgregarAnalisisSintoma)
+
+
+        self.verticalLayout_76.addWidget(self.frame_117)
+
+        self.btnDiagnosticoSubmit = QPushButton(self.frame_111)
+        self.btnDiagnosticoSubmit.setObjectName(u"btnDiagnosticoSubmit")
+        self.btnDiagnosticoSubmit.setFont(font1)
+        self.btnDiagnosticoSubmit.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btnDiagnosticoSubmit.setStyleSheet(u"QPushButton{\n"
+"	background-color: #3b82f6;\n"
+"	padding: 12px;\n"
+"	border-radius: 8px;\n"
+"	color: #fff;\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: #2563eb;\n"
+"}")
+
+        self.verticalLayout_76.addWidget(self.btnDiagnosticoSubmit)
+
+
+        self.gridLayout_24.addWidget(self.frame_111, 0, 1, 1, 1)
+
+        self.horizontalSpacer_65 = QSpacerItem(239, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_24.addItem(self.horizontalSpacer_65, 0, 2, 1, 1)
+
+        self.verticalSpacer_15 = QSpacerItem(20, 194, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_24.addItem(self.verticalSpacer_15, 1, 1, 1, 1)
+
+
+        self.verticalLayout_71.addWidget(self.frame_87)
+
+        self.stackedWidget.addWidget(self.pagDiagnostico)
 
         self.gridLayout_10.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
@@ -4649,7 +4901,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(19)
+        self.stackedWidget.setCurrentIndex(20)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -4737,7 +4989,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
         self.pushButton_18.setText("")
         self.lblBienvenenida_5.setText(QCoreApplication.translate("MainWindow", u"Analisis", None))
-        self.btnAgregarAnalisis.setText(QCoreApplication.translate("MainWindow", u"      Agregar Analisis", None))
+        self.btnAgregarAnalisis.setText(QCoreApplication.translate("MainWindow", u"      Diagnosticar", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
         self.inpBusquedaCitas_2.setText("")
         ___qtablewidgetitem17 = self.tblAnalisis.horizontalHeaderItem(0)
@@ -4745,54 +4997,58 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem18 = self.tblAnalisis.horizontalHeaderItem(1)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"Paciente", None));
         ___qtablewidgetitem19 = self.tblAnalisis.horizontalHeaderItem(2)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Enfermedad", None));
         ___qtablewidgetitem20 = self.tblAnalisis.horizontalHeaderItem(3)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Paciente", None));
         ___qtablewidgetitem21 = self.tblAnalisis.horizontalHeaderItem(4)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Sintoma", None));
+        ___qtablewidgetitem22 = self.tblAnalisis.horizontalHeaderItem(5)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem23 = self.tblAnalisis.horizontalHeaderItem(6)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
         self.pushButton_21.setText("")
         self.lblBienvenenida_8.setText(QCoreApplication.translate("MainWindow", u"Enfermedades", None))
         self.btnAgregarEnfermedad.setText(QCoreApplication.translate("MainWindow", u"      Agregar Enfermedad", None))
         self.label_37.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
         self.inpBusquedaCitas_5.setText("")
-        ___qtablewidgetitem22 = self.tblEnfermedades.horizontalHeaderItem(0)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem23 = self.tblEnfermedades.horizontalHeaderItem(1)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Enfermedad", None));
-        ___qtablewidgetitem24 = self.tblEnfermedades.horizontalHeaderItem(2)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
-        ___qtablewidgetitem25 = self.tblEnfermedades.horizontalHeaderItem(3)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None));
-        ___qtablewidgetitem26 = self.tblEnfermedades.horizontalHeaderItem(4)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
-        ___qtablewidgetitem27 = self.tblEnfermedades.horizontalHeaderItem(5)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        ___qtablewidgetitem24 = self.tblEnfermedades.horizontalHeaderItem(0)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem25 = self.tblEnfermedades.horizontalHeaderItem(1)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Enfermedad", None));
+        ___qtablewidgetitem26 = self.tblEnfermedades.horizontalHeaderItem(2)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
+        ___qtablewidgetitem27 = self.tblEnfermedades.horizontalHeaderItem(3)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None));
+        ___qtablewidgetitem28 = self.tblEnfermedades.horizontalHeaderItem(4)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem29 = self.tblEnfermedades.horizontalHeaderItem(5)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
         self.pushButton_19.setText("")
         self.lblBienvenenida_6.setText(QCoreApplication.translate("MainWindow", u"Signos", None))
         self.btnAgregarSigno.setText(QCoreApplication.translate("MainWindow", u"      Agregar Signos", None))
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
         self.inpBusquedaCitas_3.setText("")
-        ___qtablewidgetitem28 = self.tblSignos.horizontalHeaderItem(0)
-        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem29 = self.tblSignos.horizontalHeaderItem(1)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
-        ___qtablewidgetitem30 = self.tblSignos.horizontalHeaderItem(2)
-        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
-        ___qtablewidgetitem31 = self.tblSignos.horizontalHeaderItem(3)
-        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        ___qtablewidgetitem30 = self.tblSignos.horizontalHeaderItem(0)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem31 = self.tblSignos.horizontalHeaderItem(1)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Signo", None));
+        ___qtablewidgetitem32 = self.tblSignos.horizontalHeaderItem(2)
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem33 = self.tblSignos.horizontalHeaderItem(3)
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
         self.pushButton_20.setText("")
         self.lblBienvenenida_7.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None))
         self.btnAgregarSintoma.setText(QCoreApplication.translate("MainWindow", u"      Agregar Sintoma", None))
         self.label_35.setText(QCoreApplication.translate("MainWindow", u"Buscar:", None))
         self.inpBusquedaCitas_4.setText("")
-        ___qtablewidgetitem32 = self.tblSintomas.horizontalHeaderItem(0)
-        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem33 = self.tblSintomas.horizontalHeaderItem(1)
-        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"Sintoma", None));
-        ___qtablewidgetitem34 = self.tblSintomas.horizontalHeaderItem(2)
-        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
-        ___qtablewidgetitem35 = self.tblSintomas.horizontalHeaderItem(3)
-        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
+        ___qtablewidgetitem34 = self.tblSintomas.horizontalHeaderItem(0)
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem35 = self.tblSintomas.horizontalHeaderItem(1)
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"Sintoma", None));
+        ___qtablewidgetitem36 = self.tblSintomas.horizontalHeaderItem(2)
+        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"Editar", None));
+        ___qtablewidgetitem37 = self.tblSintomas.horizontalHeaderItem(3)
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None));
         self.btnRegresarAUsuarios.setText("")
         self.lblRegresarAgUsuarios.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
         self.lblIconoRegistroUsuario.setText("")
@@ -4903,5 +5159,13 @@ class Ui_MainWindow(object):
         self.label_46.setText(QCoreApplication.translate("MainWindow", u"Signo", None))
         self.inpEditarSigno.setText("")
         self.btnEditarSignoSubmit.setText(QCoreApplication.translate("MainWindow", u"Guardar cambios", None))
+        self.btnRegresarAAnalisis.setText("")
+        self.lblRegresarAAnalisis.setText(QCoreApplication.translate("MainWindow", u"Regresar", None))
+        self.lblIconoRegistroAnalisis.setText("")
+        self.lblMsjRegistroAnalisis.setText(QCoreApplication.translate("MainWindow", u"Registro realizado exitosamente", None))
+        self.label_50.setText(QCoreApplication.translate("MainWindow", u"Llena los campos:", None))
+        self.label_51.setText(QCoreApplication.translate("MainWindow", u"Signos", None))
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"Sintomas", None))
+        self.btnDiagnosticoSubmit.setText(QCoreApplication.translate("MainWindow", u"Realizar diagnostico", None))
     # retranslateUi
 

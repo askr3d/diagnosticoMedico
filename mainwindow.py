@@ -138,8 +138,13 @@ class SecondWindow(QMainWindow):
             
             #* Analisis
         self.ui.btnAnalisis.mousePressEvent = self.paginaAnalisis
+                # Agregar Analisis
+        self.ui.btnAgregarAnalisis.clicked.connect(self.agregarAnalisisGet)
+        self.ui.btnRegresarAAnalisis.clicked.connect(self.paginaAnalisis)
+        self.ui.lblRegresarAAnalisis.mousePressEvent = self.paginaAnalisis
+        self.ui.btnDiagnosticoSubmit.clicked.connect(self.agregarAnalisisPost)
 
-            # TODO Enfermedades
+            # Enfermedades
         self.ui.btnEnfermedades.mousePressEvent = self.paginaEnfermedades
                 #Agregar Enfermedad
         self.ui.btnAgregarEnfermedad.clicked.connect(self.agregarEnfermedadGet)
@@ -152,7 +157,7 @@ class SecondWindow(QMainWindow):
         self.ui.btnEditarEnfermedadSubmit.clicked.connect(self.editarEnfermedadPost)
 
 
-            #*Signos
+            # Signos
         self.ui.btnSignos.mousePressEvent = self.paginaSignos
                 #Agregar Signo
         self.ui.btnAgregarSigno.clicked.connect(self.agregarSignoGet)
@@ -164,7 +169,7 @@ class SecondWindow(QMainWindow):
         self.ui.lblRegresarAgSignos.mousePressEvent = self.paginaSignos
         self.ui.btnEditarSignoSubmit.clicked.connect(self.editarSignoPost)
 
-            #* Sintomas
+            # Sintomas
         self.ui.btnSintomas.mousePressEvent = self.paginaSintomas
                 #Agregar Sintoma
         self.ui.btnAgregarSintoma.clicked.connect(self.agregarSintomaGet)
@@ -599,7 +604,25 @@ class SecondWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentWidget(self.ui.pagAnalisis)
         self.configurarTabla(self.ui.tblAnalisis)
 
-    # * Pagina Enfermedades
+    def agregarAnalisisGet(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.pagDiagnostico)
+        self.ui.lblRegistroAnalisis.hide()
+        self.ui.inpAgregarAnalisisSigno.setText('')
+        self.ui.inpAgregarAnalisisSintoma.setText('')
+
+    def agregarAnalisisPost(self):
+        signo = self.ui.inpAgregarAnalisisSigno.text()
+        sintoma = self.ui.inpAgregarAnalisisSintoma.text()
+        print(signo, sintoma)
+        if sintoma != '' and signo != '':
+            self.frameIconoMensaje(self.ui.lblRegistroAnalisis, self.ui.lblIconoRegistroAnalisis, self.ui.lblMsjRegistroAnalisis)
+            QTimer.singleShot(2000, lambda: self.paginaAnalisis(event=None))
+        else:
+             self.frameIconoMensaje(self.ui.lblRegistroAnalisis, self.ui.lblIconoRegistroAnalisis, self.ui.lblMsjRegistroAnalisis, STYLE_MSJ_ERROR, ICONO_ERROR, True)
+
+
+
+    # Pagina Enfermedades
     def paginaEnfermedades(self, event):
         self.ui.stackedWidget.setCurrentWidget(self.ui.pagEnfermedades)
         self.configurarTabla(self.ui.tblEnfermedades)
@@ -702,7 +725,7 @@ class SecondWindow(QMainWindow):
         self.deleteWindow.finished.disconnect(self.eliminarEnfermedadPost)
     #>Enfermedades
 
-    #* Pagina Signos
+    # Pagina Signos
     def paginaSignos(self, event):
         self.ui.stackedWidget.setCurrentWidget(self.ui.pagSignos)
         self.configurarTabla(self.ui.tblSignos)
@@ -794,7 +817,7 @@ class SecondWindow(QMainWindow):
         self.deleteWindow.finished.disconnect(self.eliminarSignoPost)
     #>Signos
     
-    #* Pagina Sintomas
+    # Pagina Sintomas
     def paginaSintomas(self,event):
         self.ui.stackedWidget.setCurrentWidget(self.ui.pagSintomas)
         self.configurarTabla(self.ui.tblSintomas)
